@@ -1,0 +1,8 @@
+#!/bin/bash
+#to give read/write/execute: 'chmod 755 my_script'
+
+echo "Setting up symbolic links for basic scripts
+
+ln -s scripts/.bash_profile .bash_profile
+
+echo "All done!"
