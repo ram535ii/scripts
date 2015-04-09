@@ -2,7 +2,7 @@
 #to give read/write/execute: 'chmod 755 my_script'
 #put scripts folder in home directory and call script from home
 
-echo "Setting up symbolic links for basic scripts
+echo "Setting up symbolic links for basic scripts"
 
 ln -s scripts/.bash_profile .bash_profile
 ln -s scripts/.bashrc .bashrc
