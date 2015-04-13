@@ -20,3 +20,10 @@ alias fc='foreman run rails c'
 alias fuck='sudo !!'
 
 #Git
+alias gst='git status'
+alias gc='git commit'
+alias gco='git checkout'
+alias gp='git push'
+alias gpr='git pull --rebase'
+alias gr='git rebase'
+alias gb='git branch'
