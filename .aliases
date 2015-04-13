@@ -1,0 +1,19 @@
+#ECS Remote Desktop
+alias robinrdp='ssh -L 3389:robin:3389 cs7g10@uglogin.ecs.soton.ac.uk'
+alias roordp='ssh -L 3389:roo:3389 cs7g10@uglogin.ecs.soton.ac.uk'
+
+#Mouse Acceleration
+alias disableaccel='defaults write .GlobalPreferences com.apple.mouse.scalin    g -1'
+alias enableaccel='defaults write .GlobalPreferences com.apple.mouse.scaling     1'
+
+#Tyto
+alias tytossh='ssh -p 9564 constantijn@178.62.100.172'
+alias chromeopen='open /Applications/Google\ Chrome.app --args --allow-file-access-from-files --disable-web-security'
+alias prc='vi ../.git/hooks/pre-commit'
+
+#Twistilled
+alias red='redis-server /usr/local/etc/redis.conf'
+alias fs='foreman start'
+alias fc='foreman run rails c'
+
+#Git
