@@ -20,7 +20,7 @@ BMAG="\[\033[45m\]" # background magenta
 BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
-#export PS1="$FBLU[\#]$RS--$RS{\t}$RS$FWHT\W$RS$FMAG@$RS$FRED\u$RS$FCYN\$$RS$FBLU>>>$RS"
+export PS1="$FBLU[\#]$RS--$RS{\t}$RS$FWHT\W$RS$FMAG@$RS$FRED\u$RS$FCYN\$$RS$FBLU>>>$RS"
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
