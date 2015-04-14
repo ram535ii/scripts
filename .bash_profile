@@ -5,7 +5,7 @@ UL="\[\033[4m\]" # underline
 INV="\[\033[7m\]" # inverse background and foreground
 FBLK="\[\033[30m\]" # foreground black
 FRED="\[\033[31m\]" # foreground red
-FGRN="\[\033[32m\]" # foreground green
+FGRN="\[\e[32m\]" # foreground green
 FYEL="\[\033[33m\]" # foreground yellow
 FBLU="\[\033[34m\]" # foreground blue
 FMAG="\[\033[35m\]" # foreground magenta
@@ -20,7 +20,7 @@ BMAG="\[\033[45m\]" # background magenta
 BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
-export PS1="$FBLU[\#]$RS--$RS{\t}$RS$FWHT\W$RS$FMAG@$RS$FRED\u$RS$FCYN\$$RS$FBLU>>>$RS"
+export PS1="$FBLU[\#]$FGRN$RS{\t}$RS$FMAG\W$RS$FCYN@$RS$FYEL\u$RS$FCYN\$$RS$FBLU>>>$RS"
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
