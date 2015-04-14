@@ -32,9 +32,6 @@ export PATH="/usr/texbin:$PATH"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# RVM Stuff
-source ~/.profile
-
 #Add PSQL to path
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
