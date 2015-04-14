@@ -22,6 +22,7 @@ alias fuck='sudo !!'
 #Git
 alias gst='git status'
 alias gc='git commit'
+alias ga='git add'
 alias gco='git checkout'
 alias gp='git push'
 alias gpr='git pull --rebase'
