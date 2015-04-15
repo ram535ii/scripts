@@ -1,0 +1,6 @@
+# install brew
+echo 'Installing brew'
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+#GnuPG
+brew install gnupg gnupg2
