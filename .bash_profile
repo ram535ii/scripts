@@ -20,7 +20,10 @@ BMAG="\[\033[45m\]" # background magenta
 BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
-export PS1="$FBLU[\#]$FGRN$RS{\t}$RS$FMAG\W$RS$FCYN@$RS$FYEL\u$RS$FCYN\$$RS$FBLU>>>$RS"
+# Load in the git branch prompt script
+source ~/scripts/.git-prompt.sh
+
+export PS1="$FBLU[\#]$FGRN{\t}$FMAG\W$FCYN@$FYEL\u$FCYN\$(__git_ps1)\$$FBLU>>>$RS"
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
@@ -33,7 +36,7 @@ export PATH="/usr/texbin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 #Add PSQL to path
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 herokuDatabase(){
 #	heroku pgbackups:capture;
