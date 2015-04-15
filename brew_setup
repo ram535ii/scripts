@@ -4,3 +4,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 #GnuPG
 brew install gnupg gnupg2
+
+#Redis
+brew install redis
