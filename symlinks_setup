@@ -1,6 +1,7 @@
 #!/bin/bash
 #to give read/write/execute: 'chmod 755 my_script'
 #put scripts folder in home directory and call script from home
+# ./scripts/symlink_setup
 
 echo "Setting up symbolic links for basic scripts"
 

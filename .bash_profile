@@ -21,10 +21,10 @@ BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
 # Load in the git branch prompt script
-source ~/scripts/.git-prompt.sh
+source ~/scripts/git-prompt.sh
 GIT_PS1_SHOWUPSTREAM="auto"
 
-export PS1="$FBLU[\#]$FGRN{\t}$FCYN\W$FCYN$FYEL@$FYEL\u$FRED$(__git_ps1)$FCYN\$$FBLU>>>$RS"
+export PS1="$FBLU[\#]$FGRN{\t}$FCYN\W$FCYN$FYEL@$FYEL\u$FRED\$(__git_ps1 '(%s)')$FCYN\$$FBLU>>>$RS"
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
@@ -49,3 +49,5 @@ export PATH=/usr/local/bin:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 EDITOR="vim"
+
+source ~/scripts/.bashrc
