@@ -15,6 +15,7 @@ alias prc='vi ../.git/hooks/pre-commit'
 alias red='redis-server /usr/local/etc/redis.conf'
 alias fs='foreman start'
 alias fc='foreman run rails c'
+alias dbc='rails dbconsole'
 
 #Random
 alias fuck='sudo !!'
