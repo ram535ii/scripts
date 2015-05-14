@@ -7,6 +7,6 @@ echo "Setting up symbolic links for basic scripts"
 
 ln -s scripts/.bash_profile .bash_profile
 ln -s scripts/.bashrc .bashrc
-#ln -s scripts/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
+ln -s ~/scripts/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
 
 echo "All done!"
