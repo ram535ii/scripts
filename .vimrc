@@ -16,7 +16,6 @@ colorscheme base16-railscasts
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
 highlight ColorColumn  ctermbg=237
-highlight LineNr       ctermbg=236 ctermfg=240
 highlight CursorLineNr ctermbg=236 ctermfg=240
 highlight CursorLine   ctermbg=236
 highlight StatusLineNC ctermbg=238 ctermfg=0
@@ -27,6 +26,9 @@ highlight Visual       ctermbg=3   ctermfg=0
 highlight Pmenu        ctermbg=240 ctermfg=12
 highlight PmenuSel     ctermbg=3   ctermfg=1
 highlight SpellBad     ctermbg=0   ctermfg=1
+highlight LineNr       ctermbg=NONE ctermfg=NONE
+"highlight LineNr       ctermbg=23 ctermfg=NONE
+highlight Normal			 ctermbg=NONE ctermfg=NONE
 
 "colorscheme vimbrant
 "highlight ColorColumn ctermbg=7
