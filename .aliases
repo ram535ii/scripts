@@ -16,6 +16,8 @@ alias red='redis-server /usr/local/etc/redis.conf'
 alias fs='foreman start'
 alias fc='foreman run rails c'
 alias dbc='rails dbconsole'
+alias ks='bundle exec rake karma:start'
+alias twist='cd ~/GoogleDrive/twistilled/repo'
 
 #Random
 alias fuck='sudo !!'
