@@ -50,6 +50,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
