@@ -34,3 +34,5 @@ alias gb='git branch'
 alias gl='git log'
 alias gf='git fetch'
 alias gd='git diff'
+
+alias x='gitx'
