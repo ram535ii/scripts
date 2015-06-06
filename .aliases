@@ -19,6 +19,9 @@ alias dbc='rails dbconsole'
 alias ks='bundle exec rake karma:start'
 alias twist='cd ~/GoogleDrive/twistilled/repo'
 
+#Blog
+alias blog='cd ~/GoogleDrive/ram535ii.github.io/'
+
 #Random
 alias fuck='sudo !!'
 
@@ -28,7 +31,7 @@ alias gc='git commit'
 alias ga='git add'
 alias gco='git checkout'
 alias gp='git push'
-alias gpr='git pull --rebase'
+alias gpull='git pull'
 alias gr='git rebase'
 alias gb='git branch'
 alias gl='git log'

@@ -3,6 +3,7 @@ set number
 set tabstop=2
 set shiftwidth=2
 set mouse=nvi
+set showcmd										"show leader key
 syntax enable
 filetype off                  " required for Vundle
 set t_Co=256
@@ -26,8 +27,9 @@ highlight Visual       ctermbg=3   ctermfg=0
 highlight Pmenu        ctermbg=240 ctermfg=12
 highlight PmenuSel     ctermbg=3   ctermfg=1
 highlight SpellBad     ctermbg=0   ctermfg=1
+"personal tweaks
+"highlight LineNr       ctermbg=236 ctermfg=240
 highlight LineNr       ctermbg=NONE ctermfg=NONE
-"highlight LineNr       ctermbg=23 ctermfg=NONE
 highlight Normal			 ctermbg=NONE ctermfg=NONE
 
 "colorscheme vimbrant
@@ -54,6 +56,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-fugitive'
+Plugin 'rking/ag.vim'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
@@ -87,3 +91,8 @@ filetype plugin indent on    " required
 if has('mouse_sgr')
 	set ttymouse=sgr
 endif
+
+"indent-guides
+"call <leader>ig
+"autocmd BufWinEnter * call IndentGuidesToggle
+"call indent_guides#toggle()
