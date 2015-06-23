@@ -58,6 +58,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
+Plugin 'ervandew/supertab'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
