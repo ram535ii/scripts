@@ -2,8 +2,11 @@ set nocompatible              " be iMproved, required
 set number
 set tabstop=2
 set shiftwidth=2
+set expandtab                 " use spaces for tabs
+set list
+set listchars=tab:>\.         " show me exisiting tabs
 set mouse=nvi
-set showcmd										"show leader key
+set showcmd                   " show leader key
 syntax enable
 filetype off                  " required for Vundle
 set t_Co=256
@@ -30,11 +33,30 @@ highlight SpellBad     ctermbg=0   ctermfg=1
 "personal tweaks
 "highlight LineNr       ctermbg=236 ctermfg=240
 highlight LineNr       ctermbg=NONE ctermfg=NONE
-highlight Normal			 ctermbg=NONE ctermfg=NONE
+highlight Normal       ctermbg=NONE ctermfg=NONE
 
 "colorscheme vimbrant
 "highlight ColorColumn ctermbg=7
 "highlight ColorColumn guibg=Gray
+
+" vim-indent-guides overrides because ewwwww for defaults
+hi IndentGuidesOdd  ctermbg=236
+hi IndentGuidesEven ctermbg=234
+
+" tabe bar colors
+hi TabLineFill ctermfg=LightGreen ctermbg=NONE
+hi TabLine ctermfg=Blue ctermbg=NONE
+hi TabLineSel ctermfg=Red ctermbg=236
+" Number of windows count per tab color
+hi Title ctermfg=LightBlue ctermbg=Magenta
+
+" GitGutter
+let g:gitgutter_override_sign_column_highlight = 0
+" highlight SignColumn ctermbg=234
+highlight GitGutterAdd          ctermbg=NONE
+highlight GitGutterChange       ctermbg=NONE
+highlight GitGutterDelete       ctermbg=NONE
+highlight GitGutterChangeDelete ctermbg=NONE
 "---------ColorsEnd--------------
 
 " set the runtime path to include Vundle and initialize
@@ -104,6 +126,16 @@ let g:ctrlp_custom_ignore = {
 \ }
 
 "indent-guides
-"call <leader>ig
-"autocmd BufWinEnter * call IndentGuidesToggle
-"call indent_guides#toggle()
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors           = 0
+let g:indent_guides_start_level           = 1
+let g:indent_guides_guide_size            = 1
+
+" Clear all comment markers
+ "map _ <leader>ci
+ map - <leader>ci
+ " Comment code
+ "map - <leader>cl"
+
+let NERDSpaceDelims=1          " Add a space before comments
+
