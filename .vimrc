@@ -95,6 +95,14 @@ if has('mouse_sgr')
 	set ttymouse=sgr
 endif
 
+" Shows all the files when trying to open a new file and tabbing out
+set wildmode=list:longest
+" Ignores these files in ctrlp and tabbing out files
+set wildignore+=*.swp,*.map,public/assets/*
+let g:ctrlp_custom_ignore = {
+\ 'dir': '\vpublic\/assets',
+\ }
+
 "indent-guides
 "call <leader>ig
 "autocmd BufWinEnter * call IndentGuidesToggle
