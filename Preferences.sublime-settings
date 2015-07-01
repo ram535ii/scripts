@@ -1,6 +1,10 @@
 {
 	"color_scheme": "Packages/Colorsublime-Themes/Monokai-Soft.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		"public/assets"
+	],
 	"ignored_packages":
 	[
 		"Vintage"
@@ -11,6 +15,5 @@
 	],
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-	"folder_exclude_patterns": ["public/assets"]
+	"trim_trailing_white_space_on_save": true
 }
