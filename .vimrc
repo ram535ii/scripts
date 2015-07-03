@@ -143,3 +143,5 @@ let NERDSpaceDelims=1          " Add a space before comments
 " Checks the files for changes on filesystem when we get focus     
 au WinEnter * checktime
 
+" vim-multiple-cursors (emulates sublime CMD-D)
+let g:multi_cursor_next_key='<C-d>'    "Use ctrl-d instead of ctrl-n
