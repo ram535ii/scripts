@@ -39,3 +39,5 @@ alias gf='git fetch'
 alias gd='git diff'
 
 alias x='gitx'
+
+alias vi='vim'
