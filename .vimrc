@@ -41,7 +41,7 @@ highlight Normal       ctermbg=NONE ctermfg=NONE
 
 " vim-indent-guides overrides because ewwwww for defaults
 hi IndentGuidesOdd  ctermbg=236
-hi IndentGuidesEven ctermbg=234
+hi IndentGuidesEven ctermbg=235
 
 " tabe bar colors
 hi TabLineFill ctermfg=LightGreen ctermbg=NONE
@@ -83,6 +83,7 @@ Plugin 'rking/ag.vim'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
@@ -138,4 +139,7 @@ let g:indent_guides_guide_size            = 1
  "map - <leader>cl"
 
 let NERDSpaceDelims=1          " Add a space before comments
+
+" Checks the files for changes on filesystem when we get focus     
+au WinEnter * checktime
 
