@@ -144,4 +144,7 @@ let NERDSpaceDelims=1          " Add a space before comments
 au WinEnter * checktime
 
 " vim-multiple-cursors (emulates sublime CMD-D)
-let g:multi_cursor_next_key='<C-d>'    "Use ctrl-d instead of ctrl-n
+let g:multi_cursor_next_key='<C-d>'                  " Use ctrl-d instead of ctrl-n
+let g:multi_cursor_exit_from_insert_mode = 0         " Esc in insert mode doesn't leave multiline, go to normal instead
+
+set backspace=indent,eol,start                       " backspace over everything in insert mode
