@@ -84,6 +84,7 @@ Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Shougo/neocomplete.vim'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
@@ -159,3 +160,6 @@ autocmd BufWinEnter * match RedundantSpaces /\s\+$/
 " To make it show up in new tabs - use Ctrl-E
 map ^E :match RedundantSpaces /\s\+$/ <CR>
 " ---------------------------------------------------------------
+
+" Enable neocomplete by default
+let g:neocomplete#enable_at_startup = 1
