@@ -10,6 +10,7 @@ set showcmd                   " show leader key
 syntax enable
 filetype off                  " required for Vundle
 set t_Co=256
+set hlsearch
 
 "---------Colors--------------
 set background=dark
