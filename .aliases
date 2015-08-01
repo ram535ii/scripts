@@ -23,7 +23,7 @@ alias twist='cd ~/GoogleDrive/twistilled/repo'
 alias blog='cd ~/GoogleDrive/ram535ii.github.io/'
 
 #Random
-alias fuck='sudo !!'
+# alias fuck='sudo $(history -p !!)'
 
 #Git
 alias gst='git status'
