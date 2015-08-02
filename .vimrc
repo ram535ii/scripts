@@ -86,6 +86,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'digitaltoad/vim-jade'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
