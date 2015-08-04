@@ -1,0 +1,18 @@
+# This is Git's per-user configuration file.
+[core]
+# Please adapt and uncomment the following lines:
+	user = Constantijn Schepens
+	email = constantijnschepens@gmail.com
+[push]
+	default = current
+[user]
+	name = Constantijn Schepens
+	email = constantijnschepens@gmail.com
+[merge]
+	conflictstyle = diff3
+
+# Custom Stuffs
+[alias]
+  flog = log --pretty=medium
+[format]
+  pretty = format:%C(yellow)%h %C(green)%ai %an%C(yellow) | %C()%s%C(auto)%d
