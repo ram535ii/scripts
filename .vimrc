@@ -154,6 +154,9 @@ set backspace=indent,eol,start                       " backspace over everything
 
 
 " ---------------------------------------------------------------
+" Always strip whitespace for it be evil
+autocmd BufWritePre * :%s/\s\+$//e
+
 " This is the bit that actually highlights trailing whitespace
 hi RedundantSpaces ctermbg=152
 match RedundantSpaces /\s\+$/
