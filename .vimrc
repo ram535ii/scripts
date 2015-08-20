@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 set number
 set tabstop=2
+
 set shiftwidth=2
 set expandtab                 " use spaces for tabs
 set list
@@ -17,7 +18,7 @@ set background=dark
 
 "base16-railscasts-custom.dark.256.itermcolors
 "https://github.com/chrishunt/color-schemes
-colorscheme base16-railscasts 
+colorscheme base16-railscasts
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
 highlight ColorColumn  ctermbg=237
@@ -97,7 +98,7 @@ Plugin 'digitaltoad/vim-jade'
 " Git (non-Github) Plugins
 "Plugin 'git://git.wincent.com/command-t.git'
 
-" Local Plugins (development) 
+" Local Plugins (development)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 
 " All of your Plugins must be added before the following line
@@ -168,3 +169,8 @@ map ^E :match RedundantSpaces /\s\+$/ <CR>
 
 " Enable neocomplete by default
 let g:neocomplete#enable_at_startup = 1
+
+" --------------------------------------------------------------
+" Enter inserts a newline below and stays at the same location
+nmap <CR> O<Esc>j
+" --------------------------------------------------------------
