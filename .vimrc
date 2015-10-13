@@ -88,6 +88,8 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-surround'
+Plugin 'jiangmiao/auto-pairs'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
