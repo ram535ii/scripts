@@ -69,7 +69,7 @@ call vundle#begin()
 
 "===========Vundle=================
 " let Vundle manage Vundle, required
-"Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " :help ctrlp.txt
 Plugin 'kien/ctrlp.vim'
@@ -85,9 +85,10 @@ Plugin 'rking/ag.vim'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'vim-scripts/Align'
+Plugin 'vim-ruby/vim-ruby'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
@@ -170,7 +171,8 @@ map ^E :match RedundantSpaces /\s\+$/ <CR>
 " Enable neocomplete by default
 let g:neocomplete#enable_at_startup = 1
 
-" --------------------------------------------------------------
-" Enter inserts a newline below and stays at the same location
-nmap <CR> O<Esc>j
-" --------------------------------------------------------------
+" Vim rspec
+map <Leader>f :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
