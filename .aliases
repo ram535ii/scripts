@@ -14,10 +14,12 @@ alias prc='vi ../.git/hooks/pre-commit'
 #Twistilled
 alias red='redis-server /usr/local/etc/redis.conf'
 alias fs='foreman start'
+alias hl='heroku local'
 alias fc='foreman run rails c'
 alias dbc='rails dbconsole'
 alias ks='bundle exec rake karma:start'
-alias twist='cd ~/GoogleDrive/twistilled/repo'
+alias twist='cd ~/GoogleDrive/twistilled/twistilled'
+alias light='cd ~/GoogleDrive/twistilled/lightup'
 
 #Blog
 alias blog='cd ~/GoogleDrive/ram535ii.github.io/'
