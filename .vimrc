@@ -88,7 +88,6 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 
