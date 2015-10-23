@@ -87,7 +87,6 @@ Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'vim-scripts/Align'
 Plugin 'vim-ruby/vim-ruby'
 
 " Github Plugins
