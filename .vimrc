@@ -93,6 +93,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'bling/vim-airline'
+Plugin 'vim-scripts/Align'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
@@ -179,4 +180,4 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 " Airline setting
 set laststatus=2 " Always show the bar
-set noshowmode  " Remove default mode indicator
+set noshowmode   " Remove default mode indicator
