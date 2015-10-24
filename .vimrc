@@ -16,6 +16,8 @@ set hlsearch
 "---------Colors--------------
 set background=dark
 
+" Set the following colors as the color scheme for iTerm so it corresponds to
+" Vim
 "base16-railscasts-custom.dark.256.itermcolors
 "https://github.com/chrishunt/color-schemes
 colorscheme base16-railscasts
@@ -121,7 +123,7 @@ filetype plugin indent on    " required
 
 " Vim works in all size terminal windows
 if has('mouse_sgr')
-	set ttymouse=sgr
+  set ttymouse=sgr
 endif
 
 " Shows all the files when trying to open a new file and tabbing out
@@ -148,10 +150,6 @@ let NERDSpaceDelims=1          " Add a space before comments
 
 " Checks the files for changes on filesystem when we get focus
 au WinEnter * checktime
-
-" vim-multiple-cursors (emulates sublime CMD-D)
-let g:multi_cursor_next_key='<C-d>'                  " Use ctrl-d instead of ctrl-n
-let g:multi_cursor_exit_from_insert_mode = 0         " Esc in insert mode doesn't leave multiline, go to normal instead
 
 set backspace=indent,eol,start                       " backspace over everything in insert mode
 
