@@ -94,6 +94,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/Align'
+Plugin 'jiangmiao/auto-pairs'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
