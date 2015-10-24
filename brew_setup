@@ -1,9 +1,14 @@
+#!/bin/bash
+
 # install brew
 echo 'Installing brew'
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-#GnuPG
+# GnuPG
 brew install gnupg gnupg2
 
-#Redis
+# Redis
 brew install redis
+
+# Python
+brew install python
