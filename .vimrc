@@ -181,3 +181,6 @@ map <Leader>a :call RunAllSpecs()<CR>
 " Airline setting
 set laststatus=2 " Always show the bar
 set noshowmode   " Remove default mode indicator
+
+" Put a line at 80chars
+let &colorcolumn="80"
