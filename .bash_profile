@@ -56,6 +56,12 @@ done
 
 export PATH
 
+### Twistilled Specific Setup
+#
+if [ -f $HOME/scripts_twistilled/twistilled.bashrc ]; then
+  source $HOME/scripts_twistilled/twistilled.bashrc
+fi
+
 herokuDatabase(){
 #	heroku pgbackups:capture;
   curl -o latest.dump `heroku pgbackups:url`;
