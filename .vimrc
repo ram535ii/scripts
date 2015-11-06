@@ -91,7 +91,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/Align'
 Plugin 'jiangmiao/auto-pairs'
 
@@ -179,8 +179,8 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " Airline setting
-set laststatus=2 " Always show the bar
-set noshowmode   " Remove default mode indicator
+" set laststatus=2 " Always show the bar
+" set noshowmode   " Remove default mode indicator
 
 " Put a line at 80chars
 let &colorcolumn="80"
