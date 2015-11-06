@@ -31,12 +31,16 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 #------- PS1 Related Stuff End  --------------
 
+### Helper Scripts
+#
 # Git autocompletion
 source ~/scripts/git-completion.bash
 
 #import aliases
 source ~/scripts/.aliases
 
+### Basic Path Includes
+#
 path_items=(
   /usr/texbin
   /usr/local/heroku/bin                                # Added by Heroku Toolbest
