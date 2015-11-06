@@ -52,16 +52,6 @@ done
 
 export PATH
 
-# export PATH="/usr/texbin:$PATH"
-
-### Added by the Heroku Toolbelt
-# export PATH="/usr/local/heroku/bin:$PATH"
-
-#Add PSQL to path
-# export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
-
-# export PATH=/usr/local/bin:$PATH
-
 herokuDatabase(){
 #	heroku pgbackups:capture;
   curl -o latest.dump `heroku pgbackups:url`;
