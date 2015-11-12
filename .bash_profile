@@ -24,7 +24,7 @@ BWHT="\[\033[47m\]" # background white
 # Load in the git branch prompt script
 # This is used in the PS1
 source ~/scripts/git-prompt.sh
-GIT_PS1_SHOWUPSTREAM="auto verbose"
+GIT_PS1_SHOWUPSTREAM="auto"
 
 export PS1="$FBLU[\#]$FGRN{\t}$FCYN\W$FCYN$FYEL@$FYEL\u$FRED\$(__git_ps1 '(%s)')$FCYN\$$FBLU>>>$RS"
 export CLICOLOR=1
