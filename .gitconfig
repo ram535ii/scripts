@@ -1,5 +1,6 @@
 # This is Git's per-user configuration file.
 [core]
+  excludesfile = /Users/constantijnschepens/.gitignore_global
 # Please adapt and uncomment the following lines:
 	user = Constantijn Schepens
 	email = constantijnschepens@gmail.com

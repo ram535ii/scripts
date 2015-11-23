@@ -11,5 +11,6 @@ ln -s scripts/.vimrc .vimrc
 ln -s scripts/.vim .vim
 ln -s scripts/.tmux.conf .tmux.conf
 ln -s ~/scripts/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
+ln -s scripts/.gitignore_global
 
 echo "All done!"
