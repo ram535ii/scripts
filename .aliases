@@ -29,6 +29,7 @@ alias blog='cd ~/GoogleDrive/ram535ii.github.io/'
 
 #Git
 alias gst='git status'
+alias gs='git status'
 alias gc='git commit'
 alias ga='git add'
 alias gco='git checkout'
