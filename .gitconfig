@@ -16,4 +16,5 @@
 [alias]
   flog = log --pretty=medium
 [format]
+  # Sets the default pretty used by git log
   pretty = format:%C(yellow)%h %C(green)%ai %an%C(yellow) | %C()%s%C(auto)%d
