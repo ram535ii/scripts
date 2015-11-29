@@ -20,6 +20,7 @@ alias dbc='rails dbconsole'
 alias ks='bundle exec rake karma:start'
 alias twist='cd ~/GoogleDrive/twistilled/twistilled'
 alias light='cd ~/GoogleDrive/twistilled/lightup'
+alias copy='cd ~/GoogleDrive/twistilled/copyin'
 
 #Blog
 alias blog='cd ~/GoogleDrive/ram535ii.github.io/'
@@ -29,6 +30,7 @@ alias blog='cd ~/GoogleDrive/ram535ii.github.io/'
 
 #Git
 alias gst='git status'
+alias gs='git status'
 alias gc='git commit'
 alias ga='git add'
 alias gco='git checkout'

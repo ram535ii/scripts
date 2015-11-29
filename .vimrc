@@ -91,9 +91,13 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/Align'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-repeat'
+Plugin 'mxw/vim-jsx'
+Plugin 'alvan/vim-closetag'
+Plugin 'edsono/vim-matchit'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
@@ -179,5 +183,14 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " Airline setting
-set laststatus=2 " Always show the bar
-set noshowmode   " Remove default mode indicator
+" set laststatus=2 " Always show the bar
+" set noshowmode   " Remove default mode indicator
+
+" Put a line at 80chars
+let &colorcolumn="80"
+
+" Enable jsx highlighting in js files
+let g:jsx_ext_required = 0
+
+" Filetypes for closetag to work int
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"

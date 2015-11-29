@@ -1,3 +1,4 @@
+#--------- PS1 Related Stuff ----------------
 # ANSI color codes
 RS="\[\033[0m\]" # reset
 HC="\[\033[1m\]" # hicolor
@@ -21,34 +22,55 @@ BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
 # Load in the git branch prompt script
+# This is used in the PS1
 source ~/scripts/git-prompt.sh
 GIT_PS1_SHOWUPSTREAM="auto"
 
 export PS1="$FBLU[\#]$FGRN{\t}$FCYN\W$FCYN$FYEL@$FYEL\u$FRED\$(__git_ps1 '(%s)')$FCYN\$$FBLU>>>$RS"
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+#------- PS1 Related Stuff End  --------------
+
+### Helper Scripts
+#
+# Git autocompletion
+source ~/scripts/git-completion.bash
 
 #import aliases
 source ~/scripts/.aliases
 
-export PATH="/usr/texbin:$PATH"
+### Basic Path Includes
+#
+path_items=(
+  /usr/texbin
+  /usr/local/heroku/bin                                # Added by Heroku Toolbest
+  /Applications/Postgres.app/Contents/Versions/9.4/bin # Add PSQL to path
+  /usr/local/bin
+  $HOME/.rvm/bin
+)
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+for i in ${path_items[@]}
+do
+  PATH=$PATH:$i
+done
 
-#Add PSQL to path
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+export PATH
+
+### Twistilled Specific Setup
+#
+if [ -f $HOME/scripts_twistilled/twistilled.bashrc ]; then
+  source $HOME/scripts_twistilled/twistilled.bashrc
+fi
 
 herokuDatabase(){
 #	heroku pgbackups:capture;
-	curl -o latest.dump `heroku pgbackups:url`;
-	pg_restore --verbose --clean --no-acl --no-owner -h localhost -U constantijnschepens -d landingheroku_development latest.dump;
+  curl -o latest.dump `heroku pgbackups:url`;
+  pg_restore --verbose --clean --no-acl --no-owner -h localhost -U constantijnschepens -d landingheroku_development latest.dump;
 }
 
-export PATH=/usr/local/bin:$PATH
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-EDITOR="vim"
-export EDITOR
+
+# Necessary
+export EDITOR="vim"
 
 source ~/scripts/.bashrc

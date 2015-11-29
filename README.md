@@ -12,4 +12,5 @@ Useful little scripty widgets
 
 ### Colors
 - .vimrc handles the color scheme selection for vim
+  - Make sure base16-railscast.vim is in .vim/colors
 - for iTerm use iTermVimThemes/base16-railscast-custom.itermcolors as the color scheme (with mild transparency)
