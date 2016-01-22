@@ -2,7 +2,6 @@
 
 if [ -f ~/scripts/regenerate_ctags ]
 then
-  echo "regenerating ctags"
   ~/scripts/regenerate_ctags &
 fi
 
