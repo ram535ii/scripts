@@ -12,3 +12,9 @@ brew install redis
 
 # Python
 brew install python
+
+# Miscellaneous packages for goodness
+brew install tree
+brew install ctags
+brew install macvim
+brew install wget
