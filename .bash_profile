@@ -39,6 +39,9 @@ source ~/scripts/git-completion.bash
 #import aliases
 source ~/scripts/.aliases
 
+# allow terminal file transfer
+source ~/scripts/transfer.sh
+
 ### Basic Path Includes
 #
 path_items=(

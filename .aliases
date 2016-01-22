@@ -18,9 +18,7 @@ alias hl='heroku local'
 alias fc='foreman run rails c'
 alias dbc='rails dbconsole'
 alias ks='bundle exec rake karma:start'
-alias twist='cd ~/GoogleDrive/twistilled/twistilled'
-alias light='cd ~/GoogleDrive/twistilled/lightup'
-alias copy='cd ~/GoogleDrive/twistilled/copyin'
+alias bsr='browser-sync start --proxy localhost:5000 --files "app/assets/stylesheets/**/*.scss, app/views/**/*.html.haml"'
 
 #Blog
 alias blog='cd ~/GoogleDrive/ram535ii.github.io/'

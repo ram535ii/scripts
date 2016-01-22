@@ -1,0 +1,129 @@
+#! /usr/bin/env ruby
+# Pre-push hook that rejects force pushes to sensitive branches.
+# Requires Git > 1.8.2
+
+class PushRejector
+  class << self
+
+    def reject_push?(branch)
+      if force_push? && pushing_to_sensitive_branch?(branch)
+        true
+      else
+        false
+      end
+    end
+
+    private
+
+    def pushing_to_sensitive_branch?(branch)
+      if SENSITIVE_BRANCHES.include?(branch)
+        yellow "Pushing to sensitive branch!"
+        true
+      else
+        false
+      end
+    end
+
+    def force_push?
+      if `ps -ocommand= -p #{Process.ppid}`.match(/( --force| -f[\s$]?)/)
+        yellow "Force push detected!"
+        true
+      else
+        false
+      end
+    end
+  end
+end
+
+class SpecRejector
+  class << self
+
+    def specs_succeeded?(branch)
+      if skip_specs?(branch)
+        yellow "Skipping running specs because we're pushing to #{branch}"
+        return true
+      end
+
+      green "Running specs"
+      $backtrace = run_specs
+      $?.success?
+    end
+
+    # Don't run specs when pushing master or staging.  You wouldn't normally do
+    # this (we're using PR's for merging at the moment) so this will be the
+    # deploy script running.  Don't interfere with the deploy script.
+    def skip_specs?(branch)
+      SENSITIVE_BRANCHES.include?(branch)
+    end
+
+    private
+
+    def run_specs
+      `rspec --tag ~type:feature --tag ~slow --no-profile --colour`
+    end
+  end
+end
+
+class GitChecker
+  def self.unstaged_changes?
+    `git status --porcelain | grep -q .; echo "$?"`.strip == "0"
+  end
+end
+
+#------
+# Initialization and helper methods
+#------
+
+def red(message)
+  puts "\e[0;31m#{message}\e[0m"
+end
+
+def yellow(message)
+  puts "\e[0;33m#{message}\e[0m"
+end
+
+def green(message)
+  puts "\e[0;32m#{message}\e[0m"
+end
+
+SENSITIVE_BRANCHES = %w(
+  master
+  staging
+)
+branch = `git branch | grep "*" | sed "s/* //"`.chomp
+
+#------
+# Run the various checks
+#------
+
+if GitChecker.unstaged_changes?
+  yellow "You have unstaged changes, which may affect whether your tests pass."
+end
+
+#------
+# Reject force pushes to master/staging
+#------
+
+if PushRejector.reject_push?(branch)
+  red "Force push to sensitive branch rejected.  Override with --no-verify if required"
+  exit(1)
+end
+
+#------
+# Run specs and fail if they don't pass
+#------
+
+if SpecRejector.specs_succeeded?(branch)
+  green "Specs passed successfully!"
+else
+  puts $backtrace
+  if SpecRejector.skip_specs?(branch)
+    yellow "Specs failed but pushing anyway because we're pushing to #{branch}"
+  else
+    red "Specs failed. If you really don't care, use --no-verify flag to skip"
+    exit(1)
+  end
+end
+
+green "All checks succeeded, pushing!"
+
