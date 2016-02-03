@@ -196,3 +196,11 @@ let g:jsx_ext_required = 0
 
 " Filetypes for closetag to work int
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
+
+" Customize the command run by :Ag
+"   -S: smart-case - only case sensitive on caps
+"   --nocolor: Don't show color codes
+"   --nogroup: Don't grp results from one file
+"   --colum: Print numbers in left column
+"   --ignore: files to ignore
+let g:ag_prg='ag -S --nocolor --nogroup --column --ignore node_modules --ignore "./log/*"'
