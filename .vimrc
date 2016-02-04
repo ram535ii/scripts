@@ -203,4 +203,4 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
 "   --nogroup: Don't grp results from one file
 "   --colum: Print numbers in left column
 "   --ignore: files to ignore
-let g:ag_prg='ag -S --nocolor --nogroup --column --ignore node_modules --ignore "./log/*"'
+let g:ag_prg='ag -S --nocolor --nogroup --column'
