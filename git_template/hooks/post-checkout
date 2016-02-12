@@ -29,18 +29,18 @@ NEW_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 # This directory is present during a rebase/merge
 if [ -d "rebase-merge" ]; then
-  echo "In the middle or a rebase/merge, don't run bundle/migrate post-checkout hook"
+  echo " -> In the middle or a rebase/merge, don't run bundle/migrate post-checkout hook"
   exit 1
 fi
 
 # During deploys we don't constantly want to be migrating/bundling it screws up the script
 if [[ ("$NEW_BRANCH" == "staging") || ("$NEW_BRANCH" == "master") ]]; then
-  echo "Moving to staging/master, don't run bundle/migrate post-checkout hook"
+  echo " -> Moving to staging/master, don't run bundle/migrate post-checkout hook"
   exit 1
 fi
 
 if [[ "$LOCAL" != "$REMOTE" && "$LOCAL" = "$BASE" ]]; then
-  echo "You are behind origin, not running bundle/migrate post-checkout hook."
+  echo " -> You are behind origin, not running bundle/migrate post-checkout hook."
   exit 1
 fi
 
@@ -50,18 +50,18 @@ function changed {
 }
 
 if changed 'Gemfile.*'; then
-  echo "Gemfile changed, bundling"
+  echo " -> Gemfile changed, bundling"
   bundle install
   [[ -d 'tmp' ]] && touch 'tmp/restart.txt'
 fi
 
 if changed 'bower.json'; then
-  echo "bower.json changed, installing"
+  echo " -> bower.json changed, installing"
   bower install
 fi
 
 if changed 'db/migrate'; then
-  echo "Migrations pending, migrating"
+  echo "-> Migrations pending, migrating"
   bundle exec rake db:migrate RAILS_ENV=development
   bundle exec rake db:test:prepare
   # bundle exec rake db:migrate RAILS_ENV=production
@@ -69,6 +69,6 @@ if changed 'db/migrate'; then
 fi
 
 if changed 'package.json'; then
-  echo "Package.json changed, installing"
+  echo " -> Package.json changed, installing"
   npm install
 fi
