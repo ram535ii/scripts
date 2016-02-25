@@ -24,24 +24,25 @@ LOCAL=$(git rev-parse @)
 REMOTE=$(git rev-parse @{u} 2> /dev/null)
 BASE=$(git merge-base @ @{u} 2> /dev/null)
 NEW_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+SKIP_BUNDLE_AND_MIGRATE=false
 
 # Exit circumstances
 
 # This directory is present during a rebase/merge
 if [ -d "rebase-merge" ]; then
   echo " -> In the middle or a rebase/merge, don't run bundle/migrate post-checkout hook"
-  exit 1
+  SKIP_BUNDLE_AND_MIGRATE=true
 fi
 
 # During deploys we don't constantly want to be migrating/bundling it screws up the script
 if [[ ("$NEW_BRANCH" == "staging") || ("$NEW_BRANCH" == "master") ]]; then
   echo " -> Moving to staging/master, don't run bundle/migrate post-checkout hook"
-  exit 1
+  SKIP_BUNDLE_AND_MIGRATE=true
 fi
 
 if [[ "$LOCAL" != "$REMOTE" && "$LOCAL" = "$BASE" ]]; then
   echo " -> You are behind origin, not running bundle/migrate post-checkout hook."
-  exit 1
+  SKIP_BUNDLE_AND_MIGRATE=true
 fi
 
 
@@ -49,26 +50,28 @@ function changed {
   git diff --name-only $oldRef $newRef | grep "^$1" > /dev/null 2>&1
 }
 
-if changed 'Gemfile.*'; then
-  echo " -> Gemfile changed, bundling"
-  bundle install
-  [[ -d 'tmp' ]] && touch 'tmp/restart.txt'
-fi
+if [ $SKIP_BUNDLE_AND_MIGRATE == false ]; then
+  if changed 'Gemfile.*'; then
+    echo " -> Gemfile changed, bundling"
+    bundle install
+    [[ -d 'tmp' ]] && touch 'tmp/restart.txt'
+  fi
 
-if changed 'bower.json'; then
-  echo " -> bower.json changed, installing"
-  bower install
-fi
+  if changed 'bower.json'; then
+    echo " -> bower.json changed, installing"
+    bower install
+  fi
 
-if changed 'db/migrate'; then
-  echo "-> Migrations pending, migrating"
-  bundle exec rake db:migrate RAILS_ENV=development
-  bundle exec rake db:test:prepare
-  # bundle exec rake db:migrate RAILS_ENV=production
-  [[ -d 'tmp' ]] && touch 'tmp/restart.txt'
-fi
+  if changed 'db/migrate'; then
+    echo "-> Migrations pending, migrating"
+    bundle exec rake db:migrate RAILS_ENV=development
+    bundle exec rake db:test:prepare
+    # bundle exec rake db:migrate RAILS_ENV=production
+    [[ -d 'tmp' ]] && touch 'tmp/restart.txt'
+  fi
 
-if changed 'package.json'; then
-  echo " -> Package.json changed, installing"
-  npm install
+  if changed 'package.json'; then
+    echo " -> Package.json changed, installing"
+    npm install
+  fi
 fi
