@@ -100,6 +100,7 @@ Plugin 'alvan/vim-closetag'
 Plugin 'edsono/vim-matchit'
 Plugin 'gcmt/taboo.vim'
 Plugin 'sickill/vim-pasta'
+Plugin 'sjl/gundo.vim'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
