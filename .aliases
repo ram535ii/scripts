@@ -42,7 +42,9 @@ alias gd='git diff'
 
 alias x='gitx'
 
+# VIM
 alias vi='vim'
+alias cleanswp='find ./ -type f -name "\.*sw[klmnop]" -delete'
 
 #Memcached
 alias memcached-start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
