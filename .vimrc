@@ -101,6 +101,7 @@ Plugin 'edsono/vim-matchit'
 Plugin 'gcmt/taboo.vim'
 Plugin 'sickill/vim-pasta'
 Plugin 'sjl/gundo.vim'
+Plugin 'dkprice/vim-easygrep'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
