@@ -8,6 +8,7 @@ ctags
 dirmngr
 elasticsearch17
 exercism
+ffmpeg
 flow
 freetype
 gcc49
@@ -19,6 +20,7 @@ gpg-agent
 imagemagick
 isl011
 jpeg
+lame
 libassuan
 libevent
 libgcrypt
@@ -55,4 +57,6 @@ v8-315
 vim
 watchman
 wget
+x264
+xvid
 xz
