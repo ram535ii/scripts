@@ -143,6 +143,9 @@ set wildignore+=*.swp,*.map,public/assets/*
 let g:ctrlp_custom_ignore = {
 \ 'dir': '\vpublic\/assets',
 \ }
+" Set no max number of files to index, otherwise in large repos not everything
+" shows up
+let g:ctrlp_max_files=0
 
 "indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
