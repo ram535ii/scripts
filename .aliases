@@ -19,6 +19,8 @@ alias fc='foreman run rails c'
 alias dbc='rails dbconsole'
 alias ks='bundle exec rake karma:start'
 alias bsr='browser-sync start --proxy localhost:5000 --files "app/assets/stylesheets/**/*, app/views/**/*, app/assets/javascripts/**/*"'
+# https://gist.github.com/tadast/9932075
+ssl_server='puma -b "ssl://127.0.0.1:5000?key=/Users/constantijnschepens/.ssh/server.key&cert=/Users/constantijnschepens/.ssh/server.crt"'
 
 #Blog
 alias blog='cd ~/GoogleDrive/ram535ii.github.io/'
