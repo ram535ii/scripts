@@ -76,4 +76,8 @@ herokuDatabase(){
 # Necessary
 export EDITOR="vim"
 
+source ~/.iterm2_shell_integration.`basename $SHELL`
+
 source ~/scripts/.bashrc
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
