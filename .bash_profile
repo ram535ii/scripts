@@ -42,6 +42,9 @@ source ~/scripts/.aliases
 # allow terminal file transfer
 source ~/scripts/transfer.sh
 
+# setup my Go workspace
+export GOPATH=$HOME/GoogleDrive/coding/go_workspace
+
 ### Basic Path Includes
 #
 path_items=(
@@ -50,6 +53,7 @@ path_items=(
   /Applications/Postgres.app/Contents/Versions/9.4/bin # Add PSQL to path
   /usr/local/bin
   $HOME/.rvm/bin
+  $GOPATH/bin
 )
 
 for i in ${path_items[@]}
