@@ -182,7 +182,7 @@ map ^E :match RedundantSpaces /\s\+$/ <CR>
 " ---------------------------------------------------------------
 
 " Enable neocomplete by default
-let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 0
 
 " Vim rspec
 map <Leader>f :call RunCurrentSpecFile()<CR>
