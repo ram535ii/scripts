@@ -1,0 +1,3 @@
+#!/bin/bash
+
+brew list > brew_index

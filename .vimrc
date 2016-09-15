@@ -73,8 +73,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" :help ctrlp.txt
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'kchmck/vim-coffee-script'
@@ -100,6 +99,9 @@ Plugin 'alvan/vim-closetag'
 Plugin 'edsono/vim-matchit'
 Plugin 'gcmt/taboo.vim'
 Plugin 'sickill/vim-pasta'
+Plugin 'sjl/gundo.vim'
+Plugin 'dkprice/vim-easygrep'
+Plugin 'ervandew/supertab'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
@@ -141,6 +143,11 @@ set wildignore+=*.swp,*.map,public/assets/*
 let g:ctrlp_custom_ignore = {
 \ 'dir': '\vpublic\/assets',
 \ }
+" Ignore files in .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" Set no max number of files to index, otherwise in large repos not everything
+" shows up
+let g:ctrlp_max_files=0
 
 "indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
@@ -176,7 +183,7 @@ map ^E :match RedundantSpaces /\s\+$/ <CR>
 " ---------------------------------------------------------------
 
 " Enable neocomplete by default
-let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 0
 
 " Vim rspec
 map <Leader>f :call RunCurrentSpecFile()<CR>
@@ -196,3 +203,11 @@ let g:jsx_ext_required = 0
 
 " Filetypes for closetag to work int
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
+
+" Customize the command run by :Ag
+"   -S: smart-case - only case sensitive on caps
+"   --nocolor: Don't show color codes
+"   --nogroup: Don't grp results from one file
+"   --colum: Print numbers in left column
+"   --ignore: files to ignore
+let g:ag_prg='ag -S --nocolor --nogroup --column'

@@ -18,7 +18,9 @@ alias hl='heroku local'
 alias fc='foreman run rails c'
 alias dbc='rails dbconsole'
 alias ks='bundle exec rake karma:start'
-alias bsr='browser-sync start --proxy localhost:5000 --files "app/assets/stylesheets/**/*.scss, app/views/**/*.html.haml"'
+alias bsr='browser-sync start --proxy localhost:5000 --files "app/assets/stylesheets/**/*, app/views/**/*, app/assets/javascripts/**/*"'
+# https://gist.github.com/tadast/9932075
+ssl_server='puma -b "ssl://127.0.0.1:5000?key=/Users/constantijnschepens/.ssh/server.key&cert=/Users/constantijnschepens/.ssh/server.crt"'
 
 #Blog
 alias blog='cd ~/GoogleDrive/ram535ii.github.io/'
@@ -42,4 +44,11 @@ alias gd='git diff'
 
 alias x='gitx'
 
+# VIM
 alias vi='vim'
+alias cleanswp='find ./ -type f -name "\.*sw[klmnop]" -delete'
+
+#Memcached
+alias memcached-start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
+alias memcached-stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
+alias memcached-restart="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist;launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
