@@ -3,6 +3,7 @@ autoconf
 automake
 boost
 cloog018
+cmake
 cscope
 ctags
 dirmngr
