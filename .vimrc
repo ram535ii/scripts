@@ -101,6 +101,7 @@ Plugin 'gcmt/taboo.vim'
 Plugin 'sickill/vim-pasta'
 Plugin 'sjl/gundo.vim'
 Plugin 'dkprice/vim-easygrep'
+Plugin 'ervandew/supertab'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
