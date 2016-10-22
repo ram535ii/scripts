@@ -56,6 +56,11 @@ path_items=(
   $GOPATH/bin
 )
 
+if [ -d  /usr/local/share/scala-2.11.8 ]; then
+  export SCALA_HOME=/usr/local/share/scala-2.11.8/
+  path_items+=($SCALA_HOME/bin)
+fi
+
 for i in ${path_items[@]}
 do
   PATH=$PATH:$i
