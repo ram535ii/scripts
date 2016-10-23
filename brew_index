@@ -8,6 +8,8 @@ cscope
 ctags
 dirmngr
 elasticsearch17
+elixir
+erlang
 exercism
 ffmpeg
 flow
@@ -38,6 +40,7 @@ lua
 macvim
 makedepend
 memcached
+mongodb
 mpfr2
 mysql
 openssl
@@ -50,6 +53,7 @@ python
 qt5
 readline
 redis
+sbt
 sl
 sqlite
 the_silver_searcher
@@ -58,6 +62,7 @@ v8-315
 vim
 watchman
 wget
+wxmac
 x264
 xvid
 xz
