@@ -54,6 +54,7 @@ qt5
 readline
 redis
 sbt
+scala
 sl
 sqlite
 the_silver_searcher
