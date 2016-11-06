@@ -13,6 +13,7 @@ brew "redis"
 brew "sbt"
 brew "scala"
 brew "the_silver_searcher"
+brew "direnv"
 
 cask "1password"
 cask "chitchat"
