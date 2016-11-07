@@ -22,6 +22,9 @@ alias bsr='browser-sync start --proxy localhost:5000 --files "app/assets/stylesh
 # https://gist.github.com/tadast/9932075
 ssl_server='puma -b "ssl://127.0.0.1:5000?key=/Users/constantijnschepens/.ssh/server.key&cert=/Users/constantijnschepens/.ssh/server.crt"'
 
+#Docker
+alias dc='docker-compose'
+
 #Random
 # alias fuck='sudo $(history -p !!)'
 
