@@ -6,6 +6,7 @@ cloog018
 cmake
 cscope
 ctags
+direnv
 dirmngr
 elasticsearch17
 elixir
