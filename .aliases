@@ -25,6 +25,12 @@ ssl_server='puma -b "ssl://127.0.0.1:5000?key=/Users/constantijnschepens/.ssh/se
 #Docker
 alias dc='docker-compose'
 
+#MySQL (see settings in /etc/my.cnf)
+alias startmysql='sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
+alias stopmysql='sudo launchctl unload -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
+alias restartmysql='sudo launchctl unload -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist;sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
+alias localmysql='mysql --user=root --password=123'
+
 #Random
 # alias fuck='sudo $(history -p !!)'
 
