@@ -16,6 +16,9 @@
 [alias]
   flog = log --pretty=medium
 	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+	shorty = status --short --branch
+  # check with upstream to see you have latest commits before pushing over upstream
+	please = push --force-with-lease
 [format]
   # Sets the default pretty used by git log
   pretty = format:%C(yellow)%h %C(green)%ai %an%C(yellow) | %C()%s%C(auto)%d
