@@ -103,6 +103,7 @@ Plugin 'sickill/vim-pasta'
 Plugin 'sjl/gundo.vim'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'ervandew/supertab'
+Plugin 'derekwyatt/vim-scala'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'
