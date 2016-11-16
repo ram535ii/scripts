@@ -8,6 +8,7 @@ set list
 set listchars=tab:>\.         " show me exisiting tabs
 set mouse=nvi
 set showcmd                   " show leader key
+set clipboard=unnamed         " let me copy out of vim!
 syntax enable
 filetype off                  " required for Vundle
 set t_Co=256
