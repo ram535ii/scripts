@@ -12,3 +12,19 @@ imap <C-w> <C-o><C-w>
 "--- Buffers
 " swap between last two buffers
 noremap <leader><leader> :e #<CR>
+
+" vim-rspec
+map <Leader>f :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+"--- Comments
+" Clear all comment markers
+map - <leader>ci
+" Comment code
+"map - <leader>cl"
+
+"--- Whitespace
+" To make it show up in new tabs - use Ctrl-E
+map ^E :match RedundantSpaces /\s\+$/ <CR>

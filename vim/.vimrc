@@ -1,4 +1,8 @@
+let mapleader = "\<Space>"
+
+" load order is important (i.e. map leader before mapping new things to it)
 exe 'source' '~/scripts/vim/mappings.vim'
+
 set nocompatible              " be iMproved, required
 set number
 set tabstop=2
@@ -15,7 +19,6 @@ filetype off                  " required for Vundle
 set t_Co=256
 set hlsearch
 
-let mapleader = "\<Space>"
 
 "---------Colors--------------
 set background=dark
@@ -160,11 +163,6 @@ let g:indent_guides_auto_colors           = 0
 let g:indent_guides_start_level           = 1
 let g:indent_guides_guide_size            = 1
 
-" Clear all comment markers
- "map _ <leader>ci
- map - <leader>ci
- " Comment code
- "map - <leader>cl"
 
 let NERDSpaceDelims=1          " Add a space before comments
 
@@ -183,18 +181,10 @@ hi RedundantSpaces ctermbg=152
 match RedundantSpaces /\s\+$/
 autocmd BufWinEnter * match RedundantSpaces /\s\+$/
 
-" To make it show up in new tabs - use Ctrl-E
-map ^E :match RedundantSpaces /\s\+$/ <CR>
 " ---------------------------------------------------------------
 
 " Enable neocomplete by default
 let g:neocomplete#enable_at_startup = 0
-
-" Vim rspec
-map <Leader>f :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 " Airline setting
 " set laststatus=2 " Always show the bar
