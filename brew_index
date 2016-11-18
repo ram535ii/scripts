@@ -59,7 +59,9 @@ scala
 sl
 sqlite
 the_silver_searcher
+tmux
 tree
+utf8proc
 v8-315
 vim
 watchman
