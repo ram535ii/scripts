@@ -10,6 +10,7 @@ symlinks:
 	ln -sf ${DIR}/.tmux.conf ~/.tmux.conf
 	ln -sf ${DIR}/.gitignore_global ~/.gitignore_global
 	ln -sf ${DIR}/.rubocop.yml ~/.rubocop.yml
+	ln -sf ${DIR}/tmux/.tmux.conf ~/.tmux.conf
 
 brew:
 	command -v brew > /dev/null 2>&1 || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
