@@ -8,7 +8,7 @@ set list
 set listchars=tab:>\.         " show me exisiting tabs
 set mouse=nvi
 set showcmd                   " show leader key
-set clipboard=unnamed         " let me copy out of vim!
+"set clipboard=unnamed         " let me copy out of vim!
 syntax enable
 filetype off                  " required for Vundle
 set t_Co=256
@@ -213,3 +213,15 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
 "   --colum: Print numbers in left column
 "   --ignore: files to ignore
 let g:ag_prg='ag -S --nocolor --nogroup --column'
+
+
+" Window switching
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+imap <C-J> <C-O><C-J>
+imap <C-K> <C-O><C-K>
+imap <C-L> <C-O><C-L>
+imap <C-H> <C-O><C-H>
+imap <C-w> <C-o><C-w>
