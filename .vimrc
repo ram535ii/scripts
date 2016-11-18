@@ -14,6 +14,8 @@ filetype off                  " required for Vundle
 set t_Co=256
 set hlsearch
 
+let mapleader = "\<Space>"
+
 "---------Colors--------------
 set background=dark
 
@@ -215,6 +217,7 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
 let g:ag_prg='ag -S --nocolor --nogroup --column'
 
 
+" MAPPINGS
 " Window switching
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -225,3 +228,8 @@ imap <C-K> <C-O><C-K>
 imap <C-L> <C-O><C-L>
 imap <C-H> <C-O><C-H>
 imap <C-w> <C-o><C-w>
+
+"# Buffers
+
+" swap between last two buffers
+noremap <leader><leader> :e #<CR>
