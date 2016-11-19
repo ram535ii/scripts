@@ -46,3 +46,9 @@ highlight GitGutterAdd          ctermbg=NONE
 highlight GitGutterChange       ctermbg=NONE
 highlight GitGutterDelete       ctermbg=NONE
 highlight GitGutterChangeDelete ctermbg=NONE
+
+" highlight whitespace
+hi RedundantSpaces ctermbg=152
+match RedundantSpaces /\s\+$/
+autocmd BufWinEnter * match RedundantSpaces /\s\+$/
+
