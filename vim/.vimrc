@@ -1,23 +1,7 @@
-let mapleader = "\<Space>"
-
 " load order is important (i.e. map leader before mapping new things to it)
+exe 'source' '~/scripts/vim/config.vim'
 exe 'source' '~/scripts/vim/mappings.vim'
 
-set nocompatible              " be iMproved, required
-set number
-set tabstop=2
-
-set shiftwidth=2
-set expandtab                 " use spaces for tabs
-set list
-set listchars=tab:>\.         " show me exisiting tabs
-set mouse=nvi
-set showcmd                   " show leader key
-"set clipboard=unnamed         " let me copy out of vim!
-syntax enable
-filetype off                  " required for Vundle
-set t_Co=256
-set hlsearch
 
 
 "---------Colors--------------
