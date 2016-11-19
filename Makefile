@@ -1,6 +1,6 @@
 DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-init: symlinks brew
+init: symlinks brew vim
 
 symlinks:
 	ln -sf ${DIR}/.bash_profile ~/.bash_profile
@@ -18,3 +18,7 @@ brew:
 	brew tap homebrew/bundle || echo ''
 	brew upgrade
 	brew bundle
+
+vim:
+	git clone https://github.com/VundleVim/Vundle.vim.git ${DIR}/vim/.vim/bundle/Vundle.vim
+	vim +PluginInstall +qall
