@@ -1,6 +1,5 @@
 let mapleader = "\<Space>"
 
-set nocompatible              " be iMproved, required
 set number
 set tabstop=2
 
@@ -12,7 +11,6 @@ set mouse=nvi
 set showcmd                   " show leader key
 "set clipboard=unnamed         " let me copy out of vim!
 syntax enable
-filetype off                  " required for Vundle
 set t_Co=256
 set hlsearch
 
@@ -33,9 +31,14 @@ endif
 "--- Whitespace
 " Always strip whitespace for it be evil
 autocmd BufWritePre * :%s/\s\+$//e
+" is the bit that actually highlights trailing whitespace
+hi RedundantSpaces ctermbg=152
+match RedundantSpaces /\s\+$/
+autocmd BufWinEnter * match RedundantSpaces /\s\+$/
 
 "--- File ignores
 " Shows all the files when trying to open a new file and tabbing out
 set wildmode=list:longest
 " Ignores these files in ctrlp and tabbing out files
 set wildignore+=*.swp,*.map,public/assets/*
+
