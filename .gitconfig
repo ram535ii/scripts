@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [core]
-  excludesfile = /Users/constantijnschepens/.gitignore_global
+	excludesfile = /Users/constantijnschepens/.gitignore_global
 # Please adapt and uncomment the following lines:
 	user = Constantijn Schepens
 	email = constantijnschepens@gmail.com
@@ -15,6 +15,10 @@
 # Custom Stuffs
 [alias]
   flog = log --pretty=medium
+	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+	shorty = status --short --branch
+  # check with upstream to see you have latest commits before pushing over upstream
+	please = push --force-with-lease
 [format]
   # Sets the default pretty used by git log
   pretty = format:%C(yellow)%h %C(green)%ai %an%C(yellow) | %C()%s%C(auto)%d
@@ -22,3 +26,9 @@
   templatedir = ~/scripts/git_template
 [color]
 	ui = auto
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

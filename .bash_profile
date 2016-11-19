@@ -85,3 +85,6 @@ source ~/.iterm2_shell_integration.`basename $SHELL`
 source ~/scripts/.bashrc
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# make direnv work
+eval "$(direnv hook bash)"
