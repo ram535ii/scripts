@@ -15,3 +15,27 @@ syntax enable
 filetype off                  " required for Vundle
 set t_Co=256
 set hlsearch
+
+" Put a line at 80chars
+let &colorcolumn="80"
+
+" Checks the files for changes on filesystem when we get focus
+au WinEnter * checktime
+
+" backspace over everything in insert mode
+set backspace=indent,eol,start
+
+" Vim works in all size terminal windows
+if has('mouse_sgr')
+  set ttymouse=sgr
+endif
+
+"--- Whitespace
+" Always strip whitespace for it be evil
+autocmd BufWritePre * :%s/\s\+$//e
+
+"--- File ignores
+" Shows all the files when trying to open a new file and tabbing out
+set wildmode=list:longest
+" Ignores these files in ctrlp and tabbing out files
+set wildignore+=*.swp,*.map,public/assets/*

@@ -4,15 +4,6 @@ exe 'source' '~/scripts/vim/colors.vim'
 exe 'source' '~/scripts/vim/plugins.vim'
 exe 'source' '~/scripts/vim/mappings.vim'
 
-" Vim works in all size terminal windows
-if has('mouse_sgr')
-  set ttymouse=sgr
-endif
-
-" Shows all the files when trying to open a new file and tabbing out
-set wildmode=list:longest
-" Ignores these files in ctrlp and tabbing out files
-set wildignore+=*.swp,*.map,public/assets/*
 let g:ctrlp_custom_ignore = {
 \ 'dir': '\vpublic\/assets',
 \ }
@@ -31,32 +22,12 @@ let g:indent_guides_guide_size            = 1
 
 let NERDSpaceDelims=1          " Add a space before comments
 
-" Checks the files for changes on filesystem when we get focus
-au WinEnter * checktime
-
-set backspace=indent,eol,start                       " backspace over everything in insert mode
-
-
-" ---------------------------------------------------------------
-" Always strip whitespace for it be evil
-autocmd BufWritePre * :%s/\s\+$//e
-
-" This is the bit that actually highlights trailing whitespace
-hi RedundantSpaces ctermbg=152
-match RedundantSpaces /\s\+$/
-autocmd BufWinEnter * match RedundantSpaces /\s\+$/
-
-" ---------------------------------------------------------------
-
 " Enable neocomplete by default
 let g:neocomplete#enable_at_startup = 0
 
 " Airline setting
 " set laststatus=2 " Always show the bar
 " set noshowmode   " Remove default mode indicator
-
-" Put a line at 80chars
-let &colorcolumn="80"
 
 " Enable jsx highlighting in js files
 let g:jsx_ext_required = 0
@@ -71,3 +42,8 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
 "   --colum: Print numbers in left column
 "   --ignore: files to ignore
 let g:ag_prg='ag -S --nocolor --nogroup --column'
+
+" is the bit that actually highlights trailing whitespace
+hi RedundantSpaces ctermbg=152
+match RedundantSpaces /\s\+$/
+autocmd BufWinEnter * match RedundantSpaces /\s\+$/
