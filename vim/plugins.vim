@@ -41,6 +41,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'ervandew/supertab'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Github Plugins
 "Plugin 'tpope/vim-fugitive'

@@ -22,3 +22,6 @@ brew:
 vim:
 	git clone https://github.com/VundleVim/Vundle.vim.git ${DIR}/vim/.vim/bundle/Vundle.vim
 	vim +PluginInstall +qall
+
+tmux:
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
