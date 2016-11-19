@@ -15,7 +15,6 @@ let g:indent_guides_start_level           = 1
 let g:indent_guides_guide_size            = 1
 
 
-let NERDSpaceDelims=1          " Add a space before comments
 
 " Enable neocomplete by default
 let g:neocomplete#enable_at_startup = 0
