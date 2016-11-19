@@ -4,14 +4,9 @@ exe 'source' '~/scripts/vim/colors.vim'
 exe 'source' '~/scripts/vim/plugins.vim'
 exe 'source' '~/scripts/vim/mappings.vim'
 
-let g:ctrlp_custom_ignore = {
-\ 'dir': '\vpublic\/assets',
-\ }
-" Ignore files in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-" Set no max number of files to index, otherwise in large repos not everything
-" shows up
-let g:ctrlp_max_files=0
+for file in split(globpath('~/scripts/vim', 'plugin.*.vim'), '\n')
+    exe 'source' file
+endfor
 
 "indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
