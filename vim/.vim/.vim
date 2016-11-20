@@ -1,1 +1,0 @@
-scripts/vim/.vim
