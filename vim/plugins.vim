@@ -1,72 +1,41 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required for Vundle
+if empty(glob("~/.vim/autoload/plug.vim"))
+  execute '!curl -fLo ~/.vim/autoload/plug.vim
+  https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin('~/.vim/plugged')
 
-"===========Vundle=================
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'flazz/vim-colorschemes'
+Plug 'kchmck/vim-coffee-script'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'pangloss/vim-javascript'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-fugitive'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'thoughtbot/vim-rspec'
+Plug 'Shougo/neocomplete.vim'
+Plug 'digitaltoad/vim-jade'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+" Plug 'bling/vim-airline'
+Plug 'vim-scripts/Align'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-repeat'
+Plug 'mxw/vim-jsx'
+Plug 'alvan/vim-closetag'
+Plug 'edsono/vim-matchit'
+Plug 'gcmt/taboo.vim'
+Plug 'sickill/vim-pasta'
+Plug 'sjl/gundo.vim'
+Plug 'dkprice/vim-easygrep'
+Plug 'ervandew/supertab'
+Plug 'derekwyatt/vim-scala'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'itchyny/lightline.vim'
 
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'pangloss/vim-javascript'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tpope/vim-fugitive'
-Plugin 'rking/ag.vim'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-endwise'
-" Plugin 'bling/vim-airline'
-Plugin 'vim-scripts/Align'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-repeat'
-Plugin 'mxw/vim-jsx'
-Plugin 'alvan/vim-closetag'
-Plugin 'edsono/vim-matchit'
-Plugin 'gcmt/taboo.vim'
-Plugin 'sickill/vim-pasta'
-Plugin 'sjl/gundo.vim'
-Plugin 'dkprice/vim-easygrep'
-Plugin 'ervandew/supertab'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'itchyny/lightline.vim'
-
-" Github Plugins
-"Plugin 'tpope/vim-fugitive'
-
-" vim-scripts.org Plugins
-"Plugin 'L9'
-
-" Git (non-Github) Plugins
-"Plugin 'git://git.wincent.com/command-t.git'
-
-" Local Plugins (development)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-"==========VundleEnd==========
+call plug#end()
