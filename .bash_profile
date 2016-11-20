@@ -88,3 +88,6 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 
 # make direnv work
 eval "$(direnv hook bash)"
+
+# Z
+source "$(brew --prefix)/etc/profile.d/z.sh"

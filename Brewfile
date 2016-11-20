@@ -17,6 +17,7 @@ brew "scala"
 brew "the_silver_searcher"
 brew "direnv"
 brew "tmux"
+brew "z"
 
 cask "1password"
 cask "chitchat"
