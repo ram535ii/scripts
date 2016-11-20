@@ -51,7 +51,7 @@ alias gd='git diff'
 alias x='gitx'
 
 # VIM
-alias vi='vim'
+alias vi='nvim'
 alias cleanswp='find ./ -type f -name "\.*sw[klmnop]" -delete'
 
 #Memcached
