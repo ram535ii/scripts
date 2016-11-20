@@ -1,11 +1,13 @@
 # Prerequisites
 tap "homebrew/dupes"
 tap "caskroom/cask"
+tap "neovim/neovim"
 
 brew "cmake"
 brew "elixir"
 brew "exercism"
 brew "vim"
+brew "neovim"
 brew "macvim"
 brew "mongodb"
 brew "python"

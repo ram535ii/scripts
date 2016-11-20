@@ -17,6 +17,7 @@ flow
 freetype
 gcc49
 gdbm
+gettext
 gmp4
 gnupg
 gnupg2
@@ -44,6 +45,7 @@ memcached
 mongodb
 mpfr2
 mysql
+neovim
 openssl
 pcre
 phantomjs
