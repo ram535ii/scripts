@@ -19,6 +19,12 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+" tagbar
+nmap <C-m> :TagbarToggle<CR>
+
+" ctags
+nnoremap <C-b> <C-]>
+
 "--- Comments
 " Clear all comment markers
 map - <leader>ci

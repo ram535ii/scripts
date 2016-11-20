@@ -26,6 +26,9 @@ Plug 'sjl/gundo.vim'
 Plug 'dkprice/vim-easygrep'
 Plug 'ervandew/supertab'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+Plug 'majutsushi/tagbar'
 
 " Languages
 Plug 'kchmck/vim-coffee-script'
