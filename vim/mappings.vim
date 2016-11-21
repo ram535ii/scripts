@@ -20,7 +20,7 @@ noremap <leader><leader> :e #<CR>
 " map <Leader>a :call RunAllSpecs()<CR>
 
 " tagbar
-nmap <C-m> :TagbarToggle<CR>
+" nmap <C-m> :TagbarToggle<CR>
 
 " ctags
 nnoremap <C-b> <C-]>
