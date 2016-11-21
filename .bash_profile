@@ -79,6 +79,8 @@ herokuDatabase(){
 
 # Necessary
 export EDITOR="vim"
+# Make colors in neovim normal
+export TERM=xterm-256color
 
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
