@@ -13,12 +13,6 @@ imap <C-w> <C-o><C-w>
 " swap between last two buffers
 noremap <leader><leader> :e #<CR>
 
-" vim-rspec
-" map <Leader>f :call RunCurrentSpecFile()<CR>
-" map <Leader>s :call RunNearestSpec()<CR>
-" map <Leader>l :call RunLastSpec()<CR>
-" map <Leader>a :call RunAllSpecs()<CR>
-
 " tagbar
 " nmap <C-m> :TagbarToggle<CR>
 
