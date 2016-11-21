@@ -18,6 +18,7 @@ brew "the_silver_searcher"
 brew "direnv"
 brew "tmux"
 brew "z"
+brew "reattach-to-user-namespace"
 
 cask "1password"
 cask "chitchat"

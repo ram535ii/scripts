@@ -55,6 +55,7 @@ pth
 python
 qt5
 readline
+reattach-to-user-namespace
 redis
 sbt
 scala
