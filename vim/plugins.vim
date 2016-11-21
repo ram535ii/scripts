@@ -30,6 +30,7 @@ Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 Plug 'majutsushi/tagbar'
 Plug 'janko-m/vim-test'
+Plug 'tmhedberg/matchit'
 
 " Languages
 Plug 'kchmck/vim-coffee-script'
