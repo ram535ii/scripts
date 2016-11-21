@@ -29,6 +29,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 Plug 'majutsushi/tagbar'
+Plug 'janko-m/vim-test'
 
 " Languages
 Plug 'kchmck/vim-coffee-script'
