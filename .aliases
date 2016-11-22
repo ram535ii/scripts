@@ -55,6 +55,6 @@ alias vi='nvim'
 alias cleanswp='find ./ -type f -name "\.*sw[klmnop]" -delete'
 
 #Memcached
-alias memcached-start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
-alias memcached-stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
-alias memcached-restart="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist;launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
+alias memcached-start="launchctl load /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
+alias memcached-stop="launchctl unload /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
+alias memcached-restart="launchctl unload /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist;launchctl load /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
