@@ -43,7 +43,7 @@ source ~/scripts/.aliases
 source ~/scripts/transfer.sh
 
 # setup my Go workspace
-export GOPATH=$HOME/GoogleDrive/coding/go_workspace
+export GOPATH=$HOME/coding/go_workspace
 
 ### Basic Path Includes
 #
