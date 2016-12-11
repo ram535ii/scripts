@@ -39,6 +39,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'digitaltoad/vim-jade'
 Plug 'mxw/vim-jsx'
 Plug 'derekwyatt/vim-scala'
+Plug 'elixir-lang/vim-elixir'
 
 
 call plug#end()
