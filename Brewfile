@@ -2,6 +2,8 @@
 tap "homebrew/dupes"
 tap "caskroom/cask"
 tap "neovim/neovim"
+tap "homebrew/python"
+tap "homebrew/science"
 
 brew "cmake"
 brew "elixir"
@@ -19,6 +21,9 @@ brew "direnv"
 brew "tmux"
 brew "z"
 brew "reattach-to-user-namespace"
+brew "numpy"
+brew "scipy"
+brew "matplotlib"
 
 cask "1password"
 cask "chitchat"
