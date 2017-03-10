@@ -54,6 +54,7 @@ path_items=(
   /usr/local/bin
   $HOME/.rvm/bin
   $GOPATH/bin
+  ~/Library/Python/2.7/bin
 )
 
 for i in ${path_items[@]}
