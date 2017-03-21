@@ -8,6 +8,7 @@ cscope
 ctags
 direnv
 dirmngr
+elasticsearch
 elasticsearch17
 elasticsearch@1.7
 elixir

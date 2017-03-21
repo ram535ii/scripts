@@ -24,6 +24,7 @@ brew "reattach-to-user-namespace"
 brew "numpy"
 brew "scipy"
 brew "matplotlib"
+brew "elasticsearch"
 
 cask "1password"
 cask "chitchat"
