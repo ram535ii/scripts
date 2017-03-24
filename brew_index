@@ -28,6 +28,7 @@ gmp@4
 gnupg
 gnupg2
 gpg-agent
+icu4c
 imagemagick
 isl
 isl011
@@ -64,6 +65,7 @@ mpfr@2
 msgpack
 mysql
 neovim
+node
 numpy
 openssl
 pcre
@@ -73,6 +75,7 @@ pkg-config
 pth
 python
 qt5
+qt@5.5
 readline
 reattach-to-user-namespace
 redis
@@ -94,4 +97,5 @@ wxmac
 x264
 xvid
 xz
+yarn
 z

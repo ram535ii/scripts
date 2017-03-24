@@ -25,6 +25,7 @@ brew "numpy"
 brew "scipy"
 brew "matplotlib"
 brew "elasticsearch"
+brew "yarn"
 
 cask "1password"
 cask "chitchat"
