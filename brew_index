@@ -2,6 +2,7 @@ android-sdk
 autoconf
 automake
 boost
+cloog
 cloog018
 cmake
 cscope
@@ -91,6 +92,7 @@ tree
 unibilium
 utf8proc
 v8-315
+v8@3.15
 vim
 watchman
 wget
