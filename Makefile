@@ -1,6 +1,6 @@
 DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-init: symlinks brew vim
+init: symlinks brew vim nvim tmux
 
 symlinks:
 	ln -sf ${DIR}/.bash_profile ~/.bash_profile
