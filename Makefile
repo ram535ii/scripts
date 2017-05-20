@@ -25,6 +25,8 @@ vim:
 nvim:
 	ln -sf ~/.vim ~/.config/nvim
 	ln -sf ${DIR}/vim/.vimrc ~/.config/nvim/init.vim
+	pip3 install neovim
+	nvim +UpdateRemotePlugins +qall
 
 tmux:
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

@@ -76,6 +76,8 @@ pinentry
 pkg-config
 pth
 python
+python3
+qt
 qt5
 qt@5.5
 readline
