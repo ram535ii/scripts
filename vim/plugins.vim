@@ -12,7 +12,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-fugitive'
 Plug 'rking/ag.vim'
-Plug 'Shougo/neocomplete.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/Align'
@@ -30,6 +29,9 @@ Plug 'xolox/vim-misc'
 Plug 'majutsushi/tagbar'
 Plug 'janko-m/vim-test'
 Plug 'tmhedberg/matchit'
+
+" Neovim only
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Languages
 Plug 'kchmck/vim-coffee-script'
