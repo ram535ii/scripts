@@ -11,7 +11,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-fugitive'
-Plug 'rking/ag.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/Align'
@@ -22,18 +21,27 @@ Plug 'gcmt/taboo.vim'
 Plug 'sickill/vim-pasta'
 Plug 'sjl/gundo.vim'
 Plug 'dkprice/vim-easygrep'
-Plug 'ervandew/supertab'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 Plug 'majutsushi/tagbar'
 Plug 'janko-m/vim-test'
 Plug 'tmhedberg/matchit'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-unimpaired'
+
+Plug 'wincent/ferret' "ripgrep
+Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' } "interactive find and replace
+Plug 'neomake/neomake' " easily run linters/compilers sync
 
 " Neovim only
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 
 " Languages
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'kchmck/vim-coffee-script'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rails'

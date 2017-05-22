@@ -35,26 +35,31 @@ alias localmysql='mysql --user=root --password=123'
 # alias fuck='sudo $(history -p !!)'
 
 #Git
+alias g='git'
 alias gst='git status'
 alias gs='git status'
-alias gc='git commit'
+alias gc='git commit --verbose'
 alias ga='git add'
 alias gco='git checkout'
 alias gp='git push'
 alias gpull='git pull'
 alias gr='git rebase'
 alias gb='git branch'
+alias gbr='git branch --sort=committerdate'
 alias gl='git log'
 alias gf='git fetch'
 alias gd='git diff'
-
-alias x='gitx'
+alias gdc='git diff --cached'
 
 # VIM
 alias vi='nvim'
+alias vim='nvim'
 alias cleanswp='find ./ -type f -name "\.*sw[klmnop]" -delete'
 
-#Memcached
+# Memcached
 alias memcached-start="launchctl load /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
 alias memcached-stop="launchctl unload /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
 alias memcached-restart="launchctl unload /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist;launchctl load /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
+
+# Kubectl
+alias kc='kubectl'

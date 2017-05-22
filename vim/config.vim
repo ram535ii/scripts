@@ -4,9 +4,8 @@ set number
 set tabstop=2
 
 set shiftwidth=2
-set expandtab                 " use spaces for tabs
-set list
-set listchars=tab:>\.         " show me exisiting tabs
+" set expandtab                 " use spaces for tabs
+" set list listchars=tab:▸\     "show me existing tabs
 set mouse=nvi
 set showcmd                   " show leader key
 "set clipboard=unnamed         " let me copy out of vim!
@@ -37,3 +36,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 set wildmode=list:longest
 " Ignores these files in ctrlp and tabbing out files
 set wildignore+=*.swp,*.map,public/assets/*
+
+" quickfix window always takes full bottom
+:autocmd FileType qf wincmd J

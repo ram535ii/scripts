@@ -4,6 +4,7 @@
 # Please adapt and uncomment the following lines:
 	user = Constantijn Schepens
 	email = constantijnschepens@gmail.com
+	editor = nvim
 [push]
 	default = current
 [user]
@@ -19,6 +20,8 @@
 	shorty = status --short --branch
   # check with upstream to see you have latest commits before pushing over upstream
 	please = push --force-with-lease
+	commit = commit --verbose
+	branches = branch --sort=committerdate
 [format]
   # Sets the default pretty used by git log
   pretty = format:%C(yellow)%h %C(green)%ai %an%C(yellow) | %C()%s%C(auto)%d

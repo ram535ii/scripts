@@ -4,3 +4,6 @@
 
 # find and replace in command line
 `find . -type f -name '*.txt' -exec sed -i '' s/this/that/ {} +`
+
+# disable sleeping, you can still lock though!
+`pmset -a sleep 0`
