@@ -5,6 +5,7 @@ init: symlinks brew nvim tmux
 symlinks:
 	ln -sf ${DIR}/.bash_profile ~/.bash_profile
 	ln -sf ${DIR}/.bashrc ~/.bashrc
+	ln -sf ${DIR}/.zshrc ~/.zshrc
 	ln -sf ${DIR}/vim/.vimrc ~/.vimrc
 	ln -sf ${DIR}/.tmux.conf ~/.tmux.conf
 	ln -sf ${DIR}/.gitignore_global ~/.gitignore_global
