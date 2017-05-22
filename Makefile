@@ -8,6 +8,7 @@ symlinks:
 	ln -sf ${DIR}/vim/.vimrc ~/.vimrc
 	ln -sf ${DIR}/.tmux.conf ~/.tmux.conf
 	ln -sf ${DIR}/.gitignore_global ~/.gitignore_global
+	ln -sf ${DIR}/.gitconfig ~/.gitconfig
 	ln -sf ${DIR}/.rubocop.yml ~/.rubocop.yml
 	ln -sf ${DIR}/tmux/.tmux.conf ~/.tmux.conf
 
