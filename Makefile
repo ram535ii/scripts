@@ -1,6 +1,6 @@
 DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-init: symlinks brew vim nvim tmux
+init: symlinks brew nvim tmux
 
 symlinks:
 	ln -sf ${DIR}/.bash_profile ~/.bash_profile
@@ -13,21 +13,18 @@ symlinks:
 	ln -sf ${DIR}/tmux/.tmux.conf ~/.tmux.conf
 
 brew:
-	command -v brew > /dev/null 2>&1 || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	command -v brew > /dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew update
 	brew tap homebrew/bundle || echo ''
 	brew upgrade
 	brew bundle
 
-vim:
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	vim +PlugInstall +qall
-
 nvim:
 	ln -sf ~/.vim ~/.config/nvim
 	ln -sf ${DIR}/vim/.vimrc ~/.config/nvim/init.vim
+	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	pip3 install neovim
-	nvim +UpdateRemotePlugins +qall
+	nvim +PlugInstall +UpdateRemotePlugins +qall
 
 tmux:
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
