@@ -52,6 +52,7 @@ alias x='gitx'
 
 # VIM
 alias vi='nvim'
+alias vim='nvim'
 alias cleanswp='find ./ -type f -name "\.*sw[klmnop]" -delete'
 
 #Memcached
