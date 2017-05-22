@@ -4,6 +4,7 @@
 # Please adapt and uncomment the following lines:
 	user = Constantijn Schepens
 	email = constantijnschepens@gmail.com
+	editor = nvim
 [push]
 	default = current
 [user]
