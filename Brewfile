@@ -4,10 +4,12 @@ tap "caskroom/cask"
 tap "neovim/neovim"
 tap "homebrew/python"
 tap "homebrew/science"
+# tap monzo/tap git@github.com:monzo/tap.git
 
 # Must be installed first
 cask "java"
 
+brew "awscli"
 brew "cmake"
 brew "ctags"
 brew "direnv"
@@ -18,6 +20,7 @@ brew "git"
 brew "gnupg2"
 brew "go"
 brew "gpg-agent"
+brew "kubectl"
 brew "macvim"
 brew "matplotlib"
 brew "mongodb"
