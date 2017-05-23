@@ -59,3 +59,6 @@ alias cleanswp='find ./ -type f -name "\.*sw[klmnop]" -delete'
 alias memcached-start="launchctl load /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
 alias memcached-stop="launchctl unload /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
 alias memcached-restart="launchctl unload /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist;launchctl load /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
+
+# Monzo
+alias £='£ -enable-emoji=false'
