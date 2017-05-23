@@ -4,7 +4,7 @@ set number
 set tabstop=2
 
 set shiftwidth=2
-set expandtab                 " use spaces for tabs
+" set expandtab                 " use spaces for tabs
 set list
 set listchars=tab:>\.         " show me exisiting tabs
 set mouse=nvi
