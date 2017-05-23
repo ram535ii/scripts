@@ -51,3 +51,7 @@ else
   # setup my Go workspace manually
   export GOPATH=$HOME/coding/go_workspace
 fi
+
+if [ -f $HOME/monzo_dotfiles/aliases ]; then
+  source $HOME/monzo_dotfiles/aliases
+fi
