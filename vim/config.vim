@@ -36,3 +36,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 set wildmode=list:longest
 " Ignores these files in ctrlp and tabbing out files
 set wildignore+=*.swp,*.map,public/assets/*
+
+" quickfix window always takes full bottom
+:autocmd FileType qf wincmd J
