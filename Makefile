@@ -1,7 +1,7 @@
 DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 # order is important
-init: symlinks brew npm nvim tmux
+init: symlinks brew npm nvim tmux general
 
 symlinks:
 	ln -sf ${DIR}/.bash_profile ~/.bash_profile
@@ -35,3 +35,8 @@ nvim:
 tmux:
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	~/.tmux/plugins/tpm/bin/install_plugins
+
+general:
+	# definitely worked on Sierra, required a logout
+	defaults write -g InitialKeyRepeat -int 12 # normal minimum is 15 (225 ms)
+	defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
