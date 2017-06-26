@@ -37,7 +37,7 @@ alias localmysql='mysql --user=root --password=123'
 #Git
 alias gst='git status'
 alias gs='git status'
-alias gc='git commit'
+alias gc='git commit --verbose'
 alias ga='git add'
 alias gco='git checkout'
 alias gp='git push'
