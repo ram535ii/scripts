@@ -30,6 +30,7 @@ Plug 'majutsushi/tagbar'
 Plug 'janko-m/vim-test'
 Plug 'tmhedberg/matchit'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'editorconfig/editorconfig-vim'
 
 " Neovim only
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
