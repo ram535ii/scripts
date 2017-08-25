@@ -35,6 +35,8 @@ export PATH
 # Necessary
 export EDITOR="nvim"
 # Make colors in neovim normal
+# export TERM=xterm-256color
+# [[ $TMUX = "" ]] && export TERM="xterm-256color"
 
 # make direnv work
 eval "$(direnv hook bash)"
