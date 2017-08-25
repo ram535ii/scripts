@@ -21,6 +21,9 @@ brew:
 	brew upgrade
 	brew bundle
 
+go:
+	# Required for deoplete-go nvim plugin
+	go get -u github.com/nsf/gocode
 npm:
 	# required for the zsh prompt
 	npm install --global pure-prompt
