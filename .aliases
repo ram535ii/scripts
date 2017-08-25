@@ -35,6 +35,7 @@ alias localmysql='mysql --user=root --password=123'
 # alias fuck='sudo $(history -p !!)'
 
 #Git
+alias g='git'
 alias gst='git status'
 alias gs='git status'
 alias gc='git commit --verbose'
