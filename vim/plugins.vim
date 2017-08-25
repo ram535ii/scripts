@@ -31,6 +31,7 @@ Plug 'janko-m/vim-test'
 Plug 'tmhedberg/matchit'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-unimpaired'
 Plug 'vim-syntastic/syntastic'
 
 " Neovim only
