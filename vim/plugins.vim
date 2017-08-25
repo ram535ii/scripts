@@ -27,7 +27,6 @@ Plug 'xolox/vim-misc'
 Plug 'majutsushi/tagbar'
 Plug 'janko-m/vim-test'
 Plug 'tmhedberg/matchit'
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-unimpaired'
 
@@ -38,8 +37,11 @@ Plug 'neomake/neomake' " easily run linters/compilers sync
 " Neovim only
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 
 " Languages
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'kchmck/vim-coffee-script'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rails'
