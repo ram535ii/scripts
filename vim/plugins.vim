@@ -30,10 +30,10 @@ Plug 'tmhedberg/matchit'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-syntastic/syntastic'
 
 Plug 'wincent/ferret' "ripgrep
 Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' } "interactive find and replace
+Plug 'neomake/neomake' " easily run linters/compilers sync
 
 " Neovim only
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

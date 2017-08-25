@@ -1,3 +1,4 @@
+let g:go_fmt_autosave=0 " Let Neomake do the work
 let g:go_fmt_command = "goimports"
 
 " ---------- shortcuts
