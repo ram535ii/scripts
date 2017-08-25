@@ -25,3 +25,6 @@ fi
 if [ -f /Users/constantijnschepens/google-cloud-sdk/completion.bash.inc ]; then
   source '/Users/constantijnschepens/google-cloud-sdk/completion.bash.inc'
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

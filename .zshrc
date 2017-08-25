@@ -57,5 +57,8 @@ if [ -f $HOME/monzo_dotfiles/aliases ]; then
   source $HOME/monzo_dotfiles/aliases
 fi
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
 # Makes <C-a> <C-e> work in zsh+tmux
 bindkey -e
