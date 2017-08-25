@@ -35,7 +35,6 @@ export PATH
 # Necessary
 export EDITOR="nvim"
 # Make colors in neovim normal
-export TERM=xterm-256color
 
 # make direnv work
 eval "$(direnv hook bash)"
@@ -55,3 +54,6 @@ fi
 if [ -f $HOME/monzo_dotfiles/aliases ]; then
   source $HOME/monzo_dotfiles/aliases
 fi
+
+# Makes <C-a> <C-e> work in zsh+tmux
+bindkey -e
