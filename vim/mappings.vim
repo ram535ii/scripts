@@ -20,6 +20,11 @@ map ^E :match RedundantSpaces /\s\+$/ <CR>
 
 
 "--- Advanced training
-inoremap jk <esc>
+inoremap <C-e> <esc>
 "disable Esc to learn 'jk'
 inoremap <esc> <nop>
+
+" open vimrc from anywhere
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+" source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
