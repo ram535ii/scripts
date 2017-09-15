@@ -31,16 +31,30 @@ if executable('govet')
 endif
 
 let g:neomake_go_enabled_makers = ['goimports', 'govet', 'golint', 'go']
+
+" hardcoding of config here is HORRIBLE
+if executable('prettier')
+	let g:neomake_javascript_prettier_maker = {
+				\ 'exe': 'prettier',
+				\ 'args': ['--write', '--config', '../lib.linting/prettierrc.json'],
+				\ 'errorformat':
+				\ '%f:%l:%c: %m,' .
+				\ '%-G%.%#'
+				\ }
+endif
+
+let g:neomake_javascript_enabled_makers = ['prettier']
+
 let g:neomake_open_list   = 2
 let g:neomake_list_height = 5
 let g:neomake_verbose     = 1
 
 
-autocmd! BufWritePost * Neomake
+" autocmd! BufWritePost * Neomake
 command Errors lopen
 
 
-" autocmd BufWritePost * call neomake#Make(1, [], function('s:Neomake_callback'))
+autocmd BufWritePost * call neomake#Make(1, [], function('s:Neomake_callback'))
 
 function! s:Neomake_callback(options)
 	if(a:options.status == 0)
