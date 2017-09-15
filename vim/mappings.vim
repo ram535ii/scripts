@@ -17,3 +17,9 @@ map - <leader>ci
 "--- Whitespace
 " To make it show up in new tabs - use Ctrl-E
 map ^E :match RedundantSpaces /\s\+$/ <CR>
+
+
+"--- Advanced training
+inoremap jk <esc>
+"disable Esc to learn 'jk'
+inoremap <esc> <nop>

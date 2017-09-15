@@ -2,8 +2,9 @@
 exe 'source' '~/scripts/vim/plugins.vim'
 exe 'source' '~/scripts/vim/config.vim'
 exe 'source' '~/scripts/vim/colors.vim'
-exe 'source' '~/scripts/vim/mappings.vim'
 
 for file in split(globpath('~/scripts/vim', 'plugin.*.vim'), '\n')
     exe 'source' file
 endfor
+
+exe 'source' '~/scripts/vim/mappings.vim'
