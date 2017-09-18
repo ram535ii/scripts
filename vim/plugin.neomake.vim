@@ -36,7 +36,7 @@ let g:neomake_go_enabled_makers = ['goimports', 'govet', 'golint', 'go']
 if executable('prettier')
 	let g:neomake_javascript_prettier_maker = {
 				\ 'exe': 'prettier',
-				\ 'args': ['--write', '--config', '../lib.linting/prettierrc.json'],
+				\ 'args': ['--write', '--config', '~/src/github.com/monzo/web-projects/.prettierrc'],
 				\ 'errorformat':
 				\ '%f:%l:%c: %m,' .
 				\ '%-G%.%#'
