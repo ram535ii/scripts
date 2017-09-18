@@ -21,6 +21,8 @@ map ^E :match RedundantSpaces /\s\+$/ <CR>
 
 "--- Advanced training
 inoremap <C-e> <esc>
+vnoremap <C-e> <esc>
+nnoremap <C-e> <esc>
 "disable Esc to learn 'jk'
 inoremap <esc> <nop>
 
