@@ -4,7 +4,6 @@ tap "caskroom/cask"
 tap "neovim/neovim"
 tap "homebrew/python"
 tap "homebrew/science"
-# tap monzo/tap git@github.com:monzo/tap.git
 
 # Must be installed first
 cask "java"
