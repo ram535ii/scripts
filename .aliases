@@ -24,6 +24,9 @@ ssl_server='puma -b "ssl://127.0.0.1:5000?key=/Users/constantijnschepens/.ssh/se
 
 #Docker
 alias dc='docker-compose'
+alias docker-stop-all='docker stop $(docker ps -a -q)'
+alias docker-rm-all='docker rm $(docker ps -a -q)'
+alias docker-rmi-all='docker images -q | xargs docker rmi -f'
 
 #MySQL (see settings in /etc/my.cnf)
 alias startmysql='sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
