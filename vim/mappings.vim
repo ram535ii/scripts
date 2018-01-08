@@ -30,3 +30,7 @@ inoremap <esc> <nop>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" omg, so much easier to see next occurance!
+nnoremap n nzz
+nnoremap N Nzz
