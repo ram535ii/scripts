@@ -20,18 +20,11 @@ Plug 'alvan/vim-closetag'
 Plug 'gcmt/taboo.vim'
 Plug 'sickill/vim-pasta'
 Plug 'sjl/gundo.vim'
-Plug 'dkprice/vim-easygrep'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'xolox/vim-easytags'
-Plug 'xolox/vim-misc'
-Plug 'majutsushi/tagbar'
-Plug 'janko-m/vim-test'
-Plug 'tmhedberg/matchit'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-unimpaired'
 
 Plug 'wincent/ferret' "ripgrep
-Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' } "interactive find and replace
 Plug 'neomake/neomake' " easily run linters/compilers sync
 
 " Neovim only
@@ -42,14 +35,23 @@ Plug 'Shougo/neosnippet-snippets'
 
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'kchmck/vim-coffee-script'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
-Plug 'digitaltoad/vim-jade'
 Plug 'mxw/vim-jsx'
-Plug 'derekwyatt/vim-scala'
-Plug 'elixir-lang/vim-elixir'
 
 
 call plug#end()
+
+" Retired plugins - still interesting
+" cTags
+" Plug 'xolox/vim-easytags'
+" Plug 'xolox/vim-misc'
+" Plug 'majutsushi/tagbar'
+
+" find/replace
+" Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' } "interactive find and replace
+" Plug 'dkprice/vim-easygrep'
+
+" testing
+" Plug 'janko-m/vim-test'
