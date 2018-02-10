@@ -57,7 +57,7 @@ alias gdc='git diff --cached'
 # VIM
 alias vi='nvim'
 alias vim='nvim'
-alias cleanswp='find ./ -type f -name "\.*sw[klmnop]" -delete'
+alias cleanswp='find ~/.local/share/nvim/swap -type f -name "\.*sw[klmnop]" -delete'
 
 # Memcached
 alias memcached-start="launchctl load /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
@@ -66,3 +66,4 @@ alias memcached-restart="launchctl unload /usr/local/Cellar/memcached/1.4.24/hom
 
 # Kubectl
 alias kc='kubectl'
+alias kg='kubectl -n io-gmon'
