@@ -67,3 +67,10 @@ alias memcached-restart="launchctl unload /usr/local/Cellar/memcached/1.4.24/hom
 # Kubectl
 alias kc='kubectl'
 alias kg='kubectl -n io-gmon'
+
+# should live in some macros file
+pr() {
+    repo=$(git remote get-url origin|sed "s/:/\\//; s/\\.git//; s/git@/https:\\/\\//")
+    branch=$(git rev-parse --abbrev-ref HEAD)
+    open "${repo}/compare/${branch}?expand=1"
+}
