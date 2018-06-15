@@ -38,7 +38,10 @@ set wildmode=list:longest
 set wildignore+=*.swp,*.map,public/assets/*
 
 " quickfix window always takes full bottom
-:autocmd FileType qf wincmd J
+autocmd FileType qf wincmd J
 
 " stop the little [Scratch] window from opening
 set completeopt-=preview
+
+" see live feedback when using :substitute
+set inccommand=split
