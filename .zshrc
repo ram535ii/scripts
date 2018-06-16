@@ -62,3 +62,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Makes <C-a> <C-e> work in zsh+tmux
 bindkey -e
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
