@@ -1,3 +1,2 @@
-map <C-n> :NERDTreeToggle<CR>
-map <C-m> :NERDTreeFind<CR>
-" map <C-n> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+map <leader>n :NERDTreeToggle<CR>
+map <leader>m :NERDTreeFind<CR>

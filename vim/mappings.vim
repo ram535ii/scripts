@@ -34,3 +34,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " omg, so much easier to see next occurance!
 nnoremap n nzz
 nnoremap N Nzz
+
+" quickfix shortcuts
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <C-q> :cclose<CR>
