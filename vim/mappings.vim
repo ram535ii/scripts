@@ -8,11 +8,6 @@ noremap <leader><leader> :e #<CR>
 " ctags
 nnoremap <C-b> <C-]>
 
-"--- Comments
-" Clear all comment markers
-map - <leader>ci
-" Comment code
-"map - <leader>cl"
 
 "--- Whitespace
 " To make it show up in new tabs - use Ctrl-E
@@ -34,3 +29,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " omg, so much easier to see next occurance!
 nnoremap n nzz
 nnoremap N Nzz
+
+" quickfix shortcuts
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <C-q> :cclose<CR>

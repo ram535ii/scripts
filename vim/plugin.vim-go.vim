@@ -4,11 +4,6 @@ let g:go_fmt_command = "goimports"
 " save automatically before :make
 set autowrite
 
-" quickfix shortcuts
-map <leader>n :cnext<CR>
-map <leader>m :cprevious<CR>
-nnoremap <leader>q :cclose<CR>
-
 " ---------- shortcuts
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
