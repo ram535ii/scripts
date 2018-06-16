@@ -75,17 +75,3 @@ let g:neomake_verbose     = 1
 
 " autocmd! BufWritePost * Neomake
 command Errors lopen
-
-
-" options for runnign neomake on save
-" autocmd BufWritePost * call neomake#Make(1, [], function('s:Neomake_callback'))
-" call neomake#configure#automake('w')
-" autocmd BufWritePost * Neomake
-
-function! s:Neomake_callback(options)
-	if(a:options.status == 0)
-		edit
-		checktime
-	endif
-endfunction
-

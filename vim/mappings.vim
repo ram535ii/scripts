@@ -8,11 +8,6 @@ noremap <leader><leader> :e #<CR>
 " ctags
 nnoremap <C-b> <C-]>
 
-"--- Comments
-" Clear all comment markers
-map - <leader>ci
-" Comment code
-"map - <leader>cl"
 
 "--- Whitespace
 " To make it show up in new tabs - use Ctrl-E
