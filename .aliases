@@ -74,3 +74,6 @@ pr() {
     branch=$(git rev-parse --abbrev-ref HEAD)
     open "${repo}/compare/${branch}?expand=1"
 }
+
+# go test
+alias gotesthere='find . -iname "*.go" -print | entr -c richgo test -v ./...'
