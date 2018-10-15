@@ -24,11 +24,14 @@ gcc@4.9
 gdbm
 gettext
 git
+glew
 gmp
 gmp4
 gmp@4
 gnupg
 gnupg2
+go
+gource
 gpg-agent
 icu4c
 imagemagick
@@ -47,6 +50,7 @@ libmpc
 libmpc08
 libmpc@0.8
 libpng
+libsodium
 libtermkey
 libtiff
 libtool
@@ -57,6 +61,7 @@ libvterm
 libyaml
 lua
 macvim
+magic-wormhole
 makedepend
 matplotlib
 memcached
@@ -70,6 +75,7 @@ neovim
 node
 numpy
 openssl
+openssl@1.1
 pcre
 phantomjs
 pinentry
@@ -86,6 +92,8 @@ redis
 sbt
 scala
 scipy
+sdl2
+sdl2_image
 sl
 sqlite
 the_silver_searcher
@@ -97,6 +105,7 @@ v8-315
 v8@3.15
 vim
 watchman
+webp
 wget
 wxmac
 x264
@@ -104,3 +113,4 @@ xvid
 xz
 yarn
 z
+zsh
