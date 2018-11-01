@@ -57,6 +57,10 @@ if [ -f $HOME/monzo_dotfiles/aliases ]; then
   source $HOME/monzo_dotfiles/aliases
 fi
 
+if [ -f $HOME/scripts/kubectl_aliases ]; then
+	source $HOME/scripts/kubectl_aliases
+fi
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
