@@ -13,6 +13,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'wincent/ferret' "ripgrep
 Plug 'jiangmiao/auto-pairs'
+Plug 'machakann/vim-highlightedyank'
 
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
