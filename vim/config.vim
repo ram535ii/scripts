@@ -5,10 +5,10 @@ set tabstop=2
 
 set shiftwidth=2
 " set expandtab                 " use spaces for tabs
-" set list listchars=tab:▸\     "show me existing tabs
+" set list listchars=tab:▸\     " show me existing tabs
 set mouse=nvi
 set showcmd                   " show leader key
-"set clipboard=unnamed         " let me copy out of vim!
+" set clipboard=unnamed         " let me copy out of vim!
 syntax enable
 set t_Co=256
 set hlsearch

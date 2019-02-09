@@ -14,6 +14,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'wincent/ferret' "ripgrep
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-highlightedyank'
+Plug 'editorconfig/editorconfig-vim'
 
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
