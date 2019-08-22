@@ -11,6 +11,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'pbogut/fzf-mru.vim'
 Plug 'wincent/ferret' "ripgrep
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-highlightedyank'
