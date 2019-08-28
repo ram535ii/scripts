@@ -34,3 +34,6 @@ nnoremap N Nzz
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <C-q> :cclose<CR>
+
+" space + yy = copy to clipboard
+vnoremap <leader>yy "+y

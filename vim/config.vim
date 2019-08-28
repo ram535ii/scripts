@@ -45,3 +45,6 @@ set completeopt-=preview
 
 " see live feedback when using :substitute
 set inccommand=split
+
+" escaping insert during multicursor preserves the cursor
+let g:multi_cursor_exit_from_insert_mode = 0
