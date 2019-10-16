@@ -35,7 +35,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Shows all the files when trying to open a new file and tabbing out
 set wildmode=list:longest
 " Ignores these files in ctrlp and tabbing out files
-set wildignore+=*.swp,*.map,public/assets/*
+"  *.rule is for egress files
+set wildignore+=*.swp,*.map,public/assets/*,*.rule
 
 " quickfix window always takes full bottom
 autocmd FileType qf wincmd J
