@@ -17,6 +17,7 @@ Plug 'wincent/ferret' "ripgrep
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-highlightedyank'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }

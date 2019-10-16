@@ -1,0 +1,21 @@
+{
+	"diagnostic.enable": false,
+	"hoverTarget":"float",
+
+	"suggest.floatEnable": true,
+	"suggest.enablePreview": true,
+	"suggest.detailMaxLength": 20,
+	"suggest.maxCompleteItemCount": 10,
+	"suggest.snippetIndicator": " ",
+	"suggest.disableKind": false,
+	"suggest.detailField": "preview",
+	"suggest.echodocSupport": true,
+
+	"languageserver": {
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod"],
+			"filetypes": ["go"]
+		}
+	}
+}
