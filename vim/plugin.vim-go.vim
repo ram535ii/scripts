@@ -4,6 +4,11 @@ let g:go_fmt_command = "goimports"
 " save automatically before :make
 set autowrite
 
+" user gopls language server rather than guru - much faster.
+" warning: beta
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 " ---------- shortcuts
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
