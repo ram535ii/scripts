@@ -75,6 +75,9 @@ pr() {
     branch=$(git rev-parse --abbrev-ref HEAD)
     open "${repo}/compare/${branch}?expand=1"
 }
+watchgotests() {
+	nodemon -e .go --exec "clear && richgo test ./$1/... && echo 'Currently testing: $1'"
+}
 
 # go test
 alias gotesthere='find . -iname "*.go" -print | entr -c richgo test -v ./...'
