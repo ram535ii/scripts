@@ -12,6 +12,14 @@ source ~/scripts/.aliases
 # allow terminal file transfer
 source ~/scripts/transfer.sh
 
+# Monzo specific
+if [ -f $HOME/src/github.com/monzo/starter-pack/zshrc ]; then
+  source $HOME/src/github.com/monzo/starter-pack/zshrc
+else # setup my Go workspace manually
+  export GOPATH=$HOME
+fi
+
+
 # Basic Path Includes
 path_items=(
   /usr/texbin
@@ -43,15 +51,6 @@ eval "$(direnv hook bash)"
 
 # Z
 source "$(brew --prefix)/etc/profile.d/z.sh"
-
-
-# Monzo specific
-if [ -f $HOME/src/github.com/monzo/starter-pack/zshrc ]; then
-  source $HOME/src/github.com/monzo/starter-pack/zshrc
-else
-  # setup my Go workspace manually
-  export GOPATH=$HOME
-fi
 
 if [ -f $HOME/monzo_dotfiles/aliases ]; then
   source $HOME/monzo_dotfiles/aliases
