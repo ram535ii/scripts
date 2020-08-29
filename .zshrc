@@ -19,8 +19,16 @@ else # setup my Go workspace manually
   export GOPATH=$HOME
 fi
 
+if [ -f $HOME/monzo_dotfiles/aliases ]; then
+  source $HOME/monzo_dotfiles/aliases
+fi
 
-# Basic Path Includes
+if [ -f $HOME/scripts/kubectl_aliases ]; then
+	source $HOME/scripts/kubectl_aliases
+fi
+
+# Basic Path Includes.
+# Must come _after_ GOPATH is set.
 path_items=(
   /usr/texbin
   /usr/local/heroku/bin                                # Added by Heroku Toolbest
@@ -38,6 +46,9 @@ done
 
 export PATH
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Necessary
@@ -51,17 +62,6 @@ eval "$(direnv hook bash)"
 
 # Z
 source "$(brew --prefix)/etc/profile.d/z.sh"
-
-if [ -f $HOME/monzo_dotfiles/aliases ]; then
-  source $HOME/monzo_dotfiles/aliases
-fi
-
-if [ -f $HOME/scripts/kubectl_aliases ]; then
-	source $HOME/scripts/kubectl_aliases
-fi
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 # Makes <C-a> <C-e> work in zsh+tmux
 bindkey -e
