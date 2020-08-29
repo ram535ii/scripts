@@ -50,7 +50,7 @@ if [ -f $HOME/src/github.com/monzo/starter-pack/zshrc ]; then
   source $HOME/src/github.com/monzo/starter-pack/zshrc
 else
   # setup my Go workspace manually
-  export GOPATH=$HOME/coding/go_workspace
+  export GOPATH=$HOME
 fi
 
 if [ -f $HOME/monzo_dotfiles/aliases ]; then
