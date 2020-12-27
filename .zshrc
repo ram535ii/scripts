@@ -73,3 +73,6 @@ if [ -f '/Users/constantijnschepens/google-cloud-sdk/path.zsh.inc' ]; then . '/U
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/constantijnschepens/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/constantijnschepens/google-cloud-sdk/completion.zsh.inc'; fi
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/constantijnschepens/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
