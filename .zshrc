@@ -62,3 +62,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Makes <C-a> <C-e> work in zsh+tmux
 bindkey -e
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/constantijnschepens/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
