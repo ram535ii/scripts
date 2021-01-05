@@ -14,8 +14,20 @@
 	"languageserver": {
 		"golang": {
 			"command": "gopls",
-			"rootPatterns": ["go.mod"],
-			"filetypes": ["go"]
+			"args": ["serve", "-debug", ""],
+			"filetypes": ["go"],
+			"rootPatterns": ["main.go", "go.mod"],
+			"requireRootPattern": true,
+			"initializationOptions": {
+				"deepCompletion": false
+			},
+			"ignoredRootPaths": ["$HOME/src/github.com/monzo/wearedev/"],
+			"disableWorkspaceFolders": true
+		},
+		"proto" : {
+			"filetypes": ["proto"],
+			"rootPatterns": ["*.proto"],
+			"requireRootPattern": true
 		}
 	}
 }
