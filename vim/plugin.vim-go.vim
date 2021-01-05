@@ -4,10 +4,19 @@ let g:go_fmt_command = "goimports"
 " save automatically before :make
 set autowrite
 
-" user gopls language server rather than guru - much faster.
-" warning: beta
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
+
+" Disable vim-go :GoDef short cut (gd)
+" this is handled by LanguageClient [LC]
+let g:go_def_mapping_enabled = 0
+" Disable code completion too, we'll let COC handle this.
+let g:go_code_completion_enabled = 0
+
+" Disable gopls until I can figure out how to make it share the same instance
+" with coc. https://github.com/josa42/coc-go/issues/76
+let g:go_gopls_enabled = 0
+" auto :GoInfo, can only use this if gopls is enabled, coc should do this
+" better anyway.
+" let g:go_auto_type_info = 1
 
 " ---------- shortcuts
 " run :GoBuild or :GoTestCompile based on the go file
@@ -45,8 +54,6 @@ let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_format_strings = 1
 
-" auto :GoInfo
-let g:go_auto_type_info = 1
 
 let g:syntastic_aggregate_errors = 1
 
