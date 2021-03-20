@@ -33,6 +33,8 @@ nvim:
 	ln -sf ~/.vim ~/.config/nvim
 	ln -sf ${DIR}/vim/.vimrc ~/.config/nvim/init.vim
 	ln -sf ${DIR}/vim/coc-settings.json ~/.config/nvim/coc-settings.json
+	# link full directory, I should probably find a way to link the whole thing rather than individual files...
+	ln -sf ${DIR}/vim/lua ~/.config/nvim/
 	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	pip3 install neovim
 	nvim +PlugInstall +UpdateRemotePlugins +qall

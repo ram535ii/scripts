@@ -1,5 +1,5 @@
-let g:go_fmt_autosave=1 " Let Neomake do the work
-let g:go_fmt_command = "goimports"
+" let g:go_fmt_autosave=1 " Let Neomake do the work
+" let g:go_fmt_command = "goimports"
 
 " save automatically before :make
 set autowrite
