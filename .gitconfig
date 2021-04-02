@@ -1,6 +1,8 @@
 # This is Git's per-user configuration file.
 [core]
 	excludesfile = /Users/constantijnschepens/.gitignore_global
+# Delta
+	pager = delta
 # Please adapt and uncomment the following lines:
 	user = Constantijn Schepens
 	email = constantijnschepens@gmail.com
@@ -37,3 +39,13 @@
 	trustExitCode = true
 [url "git@github.com:monzo/"]
 	insteadOf = "https://github.com/monzo/"
+[delta]
+	plus-style = "syntax #012800"
+	minus-style = "syntax #340001"
+	line-numbers = true
+	syntax-theme = Dracula
+	navigate = true
+	# side-by-side = true
+
+[interactive]
+	diffFilter = delta --color-only

@@ -11,6 +11,7 @@ cmake
 cscope
 ctags
 dav1d
+delta
 dfu-programmer
 direnv
 dirmngr
