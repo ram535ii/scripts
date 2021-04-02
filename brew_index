@@ -21,6 +21,7 @@ elasticsearch17
 elasticsearch@1.7
 elixir
 erlang
+exa
 exercism
 fd
 ffmpeg
@@ -153,6 +154,7 @@ rtmpdump
 rubberband
 ruby
 scipy
+sd
 sdl2
 sdl2_image
 shared-mime-info
