@@ -69,9 +69,6 @@ alias memcached-restart="launchctl unload /usr/local/Cellar/memcached/1.4.24/hom
 alias kc='kubectl'
 alias kg='kubectl -n io-gmon'
 
-# Vault
-alias vault-operator='vault-operator -w'
-
 # should live in some macros file
 pr() {
     repo=$(git remote get-url origin|sed "s/:/\\//; s/\\.git//; s/git@/https:\\/\\//")
