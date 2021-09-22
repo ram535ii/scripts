@@ -9,6 +9,7 @@ symlinks:
 	ln -sf ${DIR}/.zshrc ~/.zshrc
 	ln -sf ${DIR}/.zshenv ~/.zshenv
 	ln -sf ${DIR}/vim/.vimrc ~/.vimrc
+	ln -sf ${DIR}/vim/coc-settings.json ~/.config/nvim/coc-settings.json
 	ln -sf ${DIR}/.tmux.conf ~/.tmux.conf
 	ln -sf ${DIR}/.gitignore_global ~/.gitignore_global
 	ln -sf ${DIR}/.gitconfig ~/.gitconfig
