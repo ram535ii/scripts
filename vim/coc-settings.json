@@ -21,8 +21,8 @@
 			"initializationOptions": {
 				"deepCompletion": false
 			},
-			"ignoredRootPaths": ["$HOME/src/github.com/monzo/wearedev/"],
-			"disableWorkspaceFolders": true
+			"ignoredRootPaths": ["$HOME/src/github.com/monzo/wearedev/","$HOME/src/github.com/monzo/wearedev/libraries/streams/"],
+			"memoryMode": "DegradeClosed"
 		},
 		"proto" : {
 			"filetypes": ["proto"],
