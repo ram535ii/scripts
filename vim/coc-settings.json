@@ -16,7 +16,7 @@
 			"command": "gopls",
 			"args": ["serve", "-debug", ""],
 			"filetypes": ["go"],
-			"rootPatterns": ["main.go", "go.mod"],
+			"rootPatterns": ["main.go", "go.mod", "README.md", "LICENSE", "kafka_client.go"],
 			"requireRootPattern": true,
 			"initializationOptions": {
 				"deepCompletion": false
