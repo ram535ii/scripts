@@ -1,3 +1,13 @@
+" Monzo utilities
+nnoremap <leader>jj <cmd>Monzo jump_to_component<cr>
+nnoremap <leader>jt <cmd>Monzo jump_to_tool<cr>
+nnoremap <leader>jd <cmd>Monzo jump_to_downstream<cr>
+nnoremap <leader>jl <cmd>Monzo jump_to_library<cr>
+nnoremap <leader>jcc <cmd>Monzo jump_to_catalog_component<cr>
+nnoremap <leader>jco <cmd>Monzo jump_to_catalog_owner<cr>
+nnoremap <leader>jcs <cmd>Monzo jump_to_catalog_system<cr>
+nnoremap <leader>jb <cmd>Monzo jump_to_backstage<cr>
+
 lua <<EOF
 	custom_lsp_attach = function(client, bufnr)
 			normal_completion_prefix = 'g'
