@@ -7,6 +7,7 @@ Plug 'itchyny/lightline.vim'
 
 " Tools
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive'
