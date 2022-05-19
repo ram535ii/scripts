@@ -20,6 +20,11 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'delabere/protodef'
 
+" Languages
+" Using vim-go primarily for syntax highlighting, building, alternating to
+" test files and running tests.
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+
 " Monzo
 Plug '~/src/github.com/monzo/wearedev/tools/editors/nvim/nvim-monzo'
 Plug 'nvim-telescope/telescope.nvim' "has more optional stuff I can install
