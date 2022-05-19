@@ -19,6 +19,13 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'delabere/protodef'
 
+" Monzo
+Plug '~/src/github.com/monzo/wearedev/tools/editors/nvim/nvim-monzo'
+Plug 'nvim-telescope/telescope.nvim' "has more optional stuff I can install
+Plug 'nvim-lua/plenary.nvim' "telescope dependency
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "telescope dependency
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
 
 call plug#end()
 
