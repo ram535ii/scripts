@@ -32,7 +32,7 @@ nnoremap N Nzz
 
 " quickfix shortcuts
 nnoremap <C-n> :cnext<CR>
-nnoremap <C-m> :cprevious<CR>
+nnoremap <C-b> :cprevious<CR>
 nnoremap <C-q> :cclose<CR>
 
 " space + yy = copy to clipboard
