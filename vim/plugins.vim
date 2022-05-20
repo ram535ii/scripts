@@ -31,7 +31,16 @@ Plug 'nvim-telescope/telescope.nvim' "has more optional stuff I can install
 Plug 'nvim-lua/plenary.nvim' "telescope dependency
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "telescope dependency
 Plug 'neovim/nvim-lspconfig'
+"cmp dependencies
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+"snippets
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'rafamadriz/friendly-snippets'
 
 call plug#end()
 

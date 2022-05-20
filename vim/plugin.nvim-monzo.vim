@@ -16,9 +16,18 @@ lua <<EOF
 			local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 			local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
-			buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+			-- Don't use this when using nvim-cmp
+			-- buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 			buf_set_option('tagfunc', 'v:lua.vim.lsp.tagfunc')
 
+			-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+			local opts = { noremap=true, silent=true }
+			vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+			vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+			vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+			vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+
+			-- See `:help vim.lsp.*` for documentation on any of the below functions
 			local opts = { noremap=true, silent=true }
 			buf_set_keymap('n', '<c-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 			buf_set_keymap('n', normal_completion_prefix .. 'a', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
@@ -29,7 +38,8 @@ lua <<EOF
 			buf_set_keymap('n', normal_completion_prefix .. 'o', '<cmd>lua vim.lsp.buf.outgoing_calls()<CR>', opts)
 			buf_set_keymap('n', normal_completion_prefix .. 'r', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 			buf_set_keymap('n', normal_completion_prefix .. 's', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-			buf_set_keymap('n', normal_completion_prefix .. 't', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+			-- Clashes with tab changing.
+			-- buf_set_keymap('n', normal_completion_prefix .. 't', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 			buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 	end
 
@@ -40,11 +50,18 @@ lua <<EOF
 			}
 	)
 
+	-- Setup lspconfig.
+  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+	capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 	local lspconfig = require 'lspconfig'
 	local monzo_lsp = require 'monzo.lsp'
 
 	lspconfig.gopls.setup(
-			monzo_lsp.go_config({on_attach = custom_lsp_attach})
+			monzo_lsp.go_config({
+				capabilities = capabilities,
+				on_attach = custom_lsp_attach
+			})
 	)
 
 	-- Component autocompletion
@@ -53,9 +70,26 @@ lua <<EOF
 
 	require'monzo.cmp'
 
+	local has_words_before = function()
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+		return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+	end
+
+	local feedkey = function(key, mode)
+		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
+	end
+
 	cmp.setup({
+			snippet = {
+				-- REQUIRED - you must specify a snippet engine
+				expand = function(args)
+					vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+				end,
+			},
 			completion = {
-					autocomplete = false,
+				autocomplete = {
+					cmp_types.cmp.TriggerEvent.TextChanged,
+				},
 			},
 			experimental = {
 					native_menu = false,
@@ -63,14 +97,15 @@ lua <<EOF
 			},
 			mapping = cmp.mapping.preset.insert({
 					['<C-x><C-o>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-					['<C-x><C-z>'] = cmp.mapping({
-							i = cmp.mapping.abort(),
-							c = cmp.mapping.close(),
-					}),
-					['<tab>'] = cmp.mapping.confirm({ select = true }),
+					-- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+					['<CR>'] = cmp.mapping.confirm({ select = true }),
+					['<C-y>'] = cmp.mapping.confirm({ select = true }),
+					['<C-x><C-n>'] = cmp.mapping.select_next_item(),
+					['<C-b>'] = cmp.mapping.select_prev_item(),
 			}),
 			sources = cmp.config.sources({
 					{ name = 'nvim_lsp' },
+					{ name = 'vsnip' }, -- For vsnip users.
 					{ name = 'monzo_component', max_item_count = 20 },
 					{ name = 'monzo_system', max_item_count = 20 },
 			}),
