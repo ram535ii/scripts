@@ -42,7 +42,8 @@ set wildignore+=*.swp,*.map,public/assets/*,*.rule
 autocmd FileType qf wincmd J
 
 " stop the little [Scratch] window from opening
-set completeopt-=preview
+" set completeopt-=preview
+set completeopt=menu,menuone,noselect
 
 " see live feedback when using :substitute
 set inccommand=split

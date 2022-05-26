@@ -11,8 +11,6 @@ let g:go_def_mapping_enabled = 0
 " Disable code completion too, we'll let COC handle this.
 let g:go_code_completion_enabled = 0
 
-" Disable gopls until I can figure out how to make it share the same instance
-" with coc. https://github.com/josa42/coc-go/issues/76
 let g:go_gopls_enabled = 0
 " auto :GoInfo, can only use this if gopls is enabled, coc should do this
 " better anyway.
