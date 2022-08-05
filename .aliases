@@ -1,38 +1,13 @@
-#ECS Remote Desktop
-alias robinrdp='ssh -L 3389:robin:3389 cs7g10@uglogin.ecs.soton.ac.uk'
-alias roordp='ssh -L 3389:roo:3389 cs7g10@uglogin.ecs.soton.ac.uk'
-
 #Mouse Acceleration
 alias disableaccel='defaults write .GlobalPreferences com.apple.mouse.scalin    g -1'
 alias enableaccel='defaults write .GlobalPreferences com.apple.mouse.scaling     1'
 
-#Tyto
-alias tytossh='ssh -p 9564 constantijn@178.62.100.172'
-alias chromeopen='open /Applications/Google\ Chrome.app --args --allow-file-access-from-files --disable-web-security'
-alias prc='vi ../.git/hooks/pre-commit'
-
-#Twistilled
-alias red='redis-server /usr/local/etc/redis.conf'
-alias fs='foreman start'
-alias hl='heroku local'
-alias fc='foreman run rails c'
-alias dbc='rails dbconsole'
-alias ks='bundle exec rake karma:start'
-alias bsr='browser-sync start --proxy localhost:5000 --files "app/assets/stylesheets/**/*, app/views/**/*, app/assets/javascripts/**/*"'
-# https://gist.github.com/tadast/9932075
-ssl_server='puma -b "ssl://127.0.0.1:5000?key=/Users/constantijnschepens/.ssh/server.key&cert=/Users/constantijnschepens/.ssh/server.crt"'
 
 #Docker
 alias dc='docker-compose'
 alias docker-stop-all='docker stop $(docker ps -a -q)'
 alias docker-rm-all='docker rm $(docker ps -a -q)'
 alias docker-rmi-all='docker images -q | xargs docker rmi -f'
-
-#MySQL (see settings in /etc/my.cnf)
-alias startmysql='sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
-alias stopmysql='sudo launchctl unload -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
-alias restartmysql='sudo launchctl unload -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist;sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist'
-alias localmysql='mysql --user=root --password=123'
 
 #Random
 # alias fuck='sudo $(history -p !!)'
@@ -60,12 +35,6 @@ alias vi='nvim'
 alias vim='nvim'
 alias cleanswp='find ~/.local/share/nvim/swap -type f -name "\.*sw[klmnop]" -delete'
 
-# Memcached
-alias memcached-start="launchctl load /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
-alias memcached-stop="launchctl unload /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
-alias memcached-restart="launchctl unload /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist;launchctl load /usr/local/Cellar/memcached/1.4.24/homebrew.mxcl.memcached.plist"
-
-# Kubectl
 alias kc='kubectl'
 alias kg='kubectl -n io-gmon'
 
