@@ -12,7 +12,6 @@ symlinks:
 	ln -sf ${DIR}/.tmux.conf ~/.tmux.conf
 	ln -sf ${DIR}/.gitignore_global ~/.gitignore_global
 	ln -sf ${DIR}/.gitconfig ~/.gitconfig
-	ln -sf ${DIR}/.rubocop.yml ~/.rubocop.yml
 	ln -sf ${DIR}/tmux/.tmux.conf ~/.tmux.conf
 
 brew:
@@ -22,9 +21,6 @@ brew:
 	brew upgrade
 	brew bundle
 
-go:
-	# Required for deoplete-go nvim plugin
-	go get -u github.com/nsf/gocode
 npm:
 	# required for the zsh prompt
 	npm install --global pure-prompt
