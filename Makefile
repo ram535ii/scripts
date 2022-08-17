@@ -30,6 +30,7 @@ nvim:
 
 tmux:
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	# If the below doesn't work <tmux-prefix>+I will do it.
 	~/.tmux/plugins/tpm/bin/install_plugins
 
 general:
