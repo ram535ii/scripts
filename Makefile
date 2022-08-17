@@ -1,7 +1,7 @@
 DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 # order is important
-init: symlinks brew npm nvim tmux general
+init: symlinks brew nvim tmux general
 
 symlinks:
 	ln -sf ${DIR}/.bash_profile ~/.bash_profile
@@ -20,10 +20,6 @@ brew:
 	brew tap homebrew/bundle || echo ''
 	brew upgrade
 	brew bundle
-
-npm:
-	# required for the zsh prompt
-	npm install --global pure-prompt
 
 nvim:
 	ln -sf ~/.vim ~/.config/nvim
