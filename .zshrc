@@ -1,4 +1,5 @@
 # set prompt
+fpath+=/opt/homebrew/share/zsh/site-functions
 autoload -U promptinit; promptinit
 export PURE_GIT_PULL=0 # yubi doesn't deal with pure fetching automatically
 prompt pure
