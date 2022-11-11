@@ -41,6 +41,8 @@ lua <<EOF
 			-- Clashes with tab changing.
 			-- buf_set_keymap('n', normal_completion_prefix .. 't', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 			buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+			-- Some useful tips, including hover here:
+			-- https://smarttech101.com/nvim-lsp-configure-language-servers-shortcuts-highlights/
 	end
 
 	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
