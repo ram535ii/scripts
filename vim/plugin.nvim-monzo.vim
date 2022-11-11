@@ -43,6 +43,27 @@ lua <<EOF
 			buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 			-- Some useful tips, including hover here:
 			-- https://smarttech101.com/nvim-lsp-configure-language-servers-shortcuts-highlights/
+
+			-- Highlight symbol under cursor:
+			-- https://smarttech101.com/nvim-lsp-configure-language-servers-shortcuts-highlights/
+			if client.resolved_capabilities.document_highlight then
+				vim.cmd [[
+					hi! LspReferenceRead cterm=bold ctermbg=235 guibg=LightYellow
+					hi! LspReferenceText cterm=bold ctermbg=235 guibg=LightYellow
+					hi! LspReferenceWrite cterm=bold ctermbg=235 guibg=LightYellow
+				]]
+				vim.api.nvim_create_augroup('lsp_document_highlight', {})
+				vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
+					group = 'lsp_document_highlight',
+					buffer = 0,
+					callback = vim.lsp.buf.document_highlight,
+				})
+				vim.api.nvim_create_autocmd('CursorMoved', {
+					group = 'lsp_document_highlight',
+					buffer = 0,
+					callback = vim.lsp.buf.clear_references,
+				})
+			end
 	end
 
 	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
@@ -103,6 +124,7 @@ lua <<EOF
 			},
 			sources = cmp.config.sources({
 					{ name = 'nvim_lsp' },
+					{ name = 'nvim_lsp_signature_help' },
 					{ name = 'vsnip' }, -- For vsnip users.
 					{ name = 'monzo_component', max_item_count = 20 },
 					{ name = 'monzo_system', max_item_count = 20 },
