@@ -37,3 +37,6 @@ nnoremap <C-q> :cclose<CR>
 
 " space + yy = copy to clipboard
 vnoremap <leader>yy "+y
+
+" Monzo-specific, navigate directly to handler definition from proto request.
+nnoremap gh :let pp=getpos('.')<CR>:let res=split(system('handlertool '.shellescape(expand('%:p').':'.line('.').':'.col('.'))), ':')<CR>:e <C-R>=res[0]<CR><CR>:call setpos('.',[pp[0],res[1],res[2],0])<CR>
