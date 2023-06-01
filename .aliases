@@ -44,6 +44,10 @@ pr() {
     branch=$(git rev-parse --abbrev-ref HEAD)
     open "${repo}/compare/${branch}?expand=1"
 }
+
+alias prdesc='gh pr view $(git branch --show-current) --json title,url,additions,deletions,headRepository --template ":pr: [{{.headRepository.name}}] {{.title}} (+{{.additions}} -{{.deletions}})
+:pr-arrow: {{.url}}" | pbcopy'
+
 watchgotests() {
 	nodemon -e .go --exec "clear && richgo test ./$1/... && echo 'Currently testing: $1'"
 }
