@@ -130,4 +130,10 @@ lua <<EOF
 					{ name = 'monzo_system', max_item_count = 20 },
 			}),
 	})
+
+	-- Random cute stuff.
+	require('mini.indentscope').setup({
+	    symbol = "│",
+			options = { try_as_border = true },
+	})
 EOF

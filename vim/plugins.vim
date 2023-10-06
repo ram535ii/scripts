@@ -44,10 +44,12 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'rafamadriz/friendly-snippets'
 
-call plug#end()
-
 "-------------------------
 " Retired plugins - still interesting
 
 " visible indent guides
 " Plug 'nathanaelkane/vim-indent-guides'
+Plug 'echasnovski/mini.indentscope'
+
+call plug#end()
+
