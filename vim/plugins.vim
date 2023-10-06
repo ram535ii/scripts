@@ -19,6 +19,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-highlightedyank'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'delabere/protodef'
+Plug 'github/copilot.vim'
 
 " Languages
 " Using vim-go primarily for syntax highlighting, building, alternating to
