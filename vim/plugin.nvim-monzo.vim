@@ -73,6 +73,7 @@ lua <<EOF
 			}
 	)
 
+
 	-- Setup lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 	capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -82,6 +83,12 @@ lua <<EOF
 
 	lspconfig.gopls.setup(
 			monzo_lsp.go_config({
+
+			  -- The script below has this contents, a hack to have gopls not take ages to index (gopls v0.13.2).
+				-- #!/usr/bin/env bash
+				-- set -euo pipefail
+				-- GO111MODULE=off gopls $@
+				cmd = { "/Users/constantijn/bin/gopls.sh", "-remote=auto" },
 				capabilities = capabilities,
 				on_attach = custom_lsp_attach
 			})
