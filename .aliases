@@ -30,6 +30,16 @@ alias gf='git fetch'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
+# git-find-branch
+function gfb {
+  branches=$(git for-each-ref --count=30 \
+               --sort=-committerdate \
+               --format="%(refname:short)" \
+               refs/heads/)
+  branch=$(echo "$branches" | fzf-tmux -d $((2 + $(wc -l <<< "$branches"))))
+  git checkout "$branch"
+}
+
 # VIM
 alias vi='nvim'
 alias vim='nvim'
