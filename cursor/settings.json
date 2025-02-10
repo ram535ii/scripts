@@ -1,0 +1,96 @@
+{
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [],
+  "vim.textwidth": 120,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.importFormat": "absolute",
+  "python.analysis.indexing": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.languageServer": "Pylance",
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.unusedImports": "always",
+      "source.fixAll": "explicit",
+      "source.sortMembers": "explicit"
+    }
+  },
+  "[typescript][typescriptreact][javascript][javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.venv": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+  },
+  "files.associations": {
+    "**/*.xml.jinja": "jinja-xml",
+    "**/*.tsx.jinja": "jinja-js",
+    "**/templates/**/*.{txt,md}": "jinja",
+    "**/plans/templates/*/**/*.{txt,md}": "jinja"
+  },
+  "terminal.integrated.scrollback": 100000,
+  "editor.rulers": [
+    120
+  ],
+  "workbench.colorTheme": "Solarized Dark",
+  "gitlens.mode.active": "review",
+  "editor.cursorBlinking": "solid",
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#d2c61ff5"
+  },
+  "security.promptForLocalFileProtocolHandling": false,
+  "git.openRepositoryInParentFolders": "always",
+  "python.analysis.inlayHints.callArgumentNames": "partial",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "editor.renderWhitespace": "trailing",
+  "files.trimTrailingWhitespace": true,
+  "terminal.integrated.copyOnSelection": true,
+  "git.autofetch": true,
+  "githubPullRequests.pullBranch": "never"
+}
