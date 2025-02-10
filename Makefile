@@ -13,6 +13,7 @@ symlinks:
 	ln -sf ${DIR}/.gitignore_global ~/.gitignore_global
 	ln -sf ${DIR}/.gitconfig ~/.gitconfig
 	ln -sf ${DIR}/tmux/.tmux.conf ~/.tmux.conf
+	ln -sf ${DIR}/cursor/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
 
 brew:
 	command -v brew > /dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
