@@ -7,6 +7,7 @@ symlinks:
 	ln -sf ${DIR}/.bash_profile ~/.bash_profile
 	ln -sf ${DIR}/.bashrc ~/.bashrc
 	ln -sf ${DIR}/.zshrc ~/.zshrc
+	ln -sf ${DIR}/.zprofile ~/.profile
 	ln -sf ${DIR}/.zshenv ~/.zshenv
 	ln -sf ${DIR}/vim/.vimrc ~/.vimrc
 	ln -sf ${DIR}/.tmux.conf ~/.tmux.conf
@@ -16,7 +17,7 @@ symlinks:
 	ln -sf ${DIR}/cursor/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
 
 brew:
-	command -v brew > /dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	brew update
 	brew tap homebrew/bundle || echo ''
 	brew upgrade
