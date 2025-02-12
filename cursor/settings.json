@@ -92,5 +92,6 @@
   "files.trimTrailingWhitespace": true,
   "terminal.integrated.copyOnSelection": true,
   "git.autofetch": true,
-  "githubPullRequests.pullBranch": "never"
+  "githubPullRequests.pullBranch": "never",
+  "window.commandCenter": 1
 }

@@ -64,3 +64,5 @@ watchgotests() {
 
 # go test
 alias gotesthere='find . -iname "*.go" -print | entr -c richgo test -v ./...'
+
+alias cursor="open -a Cursor"
