@@ -32,28 +32,6 @@
   ],
   "vim.operatorPendingModeKeyBindingsNonRecursive": [],
   "vim.textwidth": 120,
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.importFormat": "absolute",
-  "python.analysis.indexing": true,
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.diagnosticMode": "workspace",
-  "python.languageServer": "Pylance",
-  "python.testing.unittestEnabled": false,
-  "python.testing.pytestEnabled": true,
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "always",
-      "source.unusedImports": "always",
-      "source.fixAll": "explicit",
-      "source.sortMembers": "explicit"
-    }
-  },
-  "[typescript][typescriptreact][javascript][javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -84,14 +62,45 @@
   },
   "security.promptForLocalFileProtocolHandling": false,
   "git.openRepositoryInParentFolders": "always",
-  "python.analysis.inlayHints.callArgumentNames": "partial",
-  "python.analysis.inlayHints.functionReturnTypes": true,
-  "python.analysis.inlayHints.pytestParameters": true,
-  "python.analysis.inlayHints.variableTypes": true,
   "editor.renderWhitespace": "trailing",
   "files.trimTrailingWhitespace": true,
   "terminal.integrated.copyOnSelection": true,
   "git.autofetch": true,
   "githubPullRequests.pullBranch": "never",
-  "window.commandCenter": 1
+  "window.commandCenter": 1,
+  "go.languageServerFlags": [
+    "serve",
+    "-rpc.trace",
+    "--debug=localhost:6060",
+  ],
+  "gopls": {
+    "build.directoryFilters": [
+      "-vendor",
+      "-manifests",
+      "-static-check-rules"
+    ],
+    "formatting.local": "github.com/monzo"
+  },
+  "files.insertFinalNewline": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {},
+  "editor.snippets.codeActions.enabled": false,
+  "go.lintOnSave": "file",
+  "go.survey.prompt": false,
+  "go.testExplorer.enable": false,
+  "go.testExplorer.concatenateMessages": false,
+  "go.lintTool": "golint",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "go.formatTool": "goimports",
+  "go.toolsEnvVars": {
+    "GO111MODULE": "auto"
+  },
+  // this helps vscode automatically import protos
+  "protoc": {
+    "options": [
+      "--proto_path=${env.GOPATH}/src"
+    ]
+  }
 }
