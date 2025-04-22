@@ -47,3 +47,7 @@
 
 [interactive]
 	diffFilter = delta --color-only
+[scalar]
+	repo = /Users/constantijn/src/github.com/monzo/wearedev
+[maintenance]
+	repo = /Users/constantijn/src/github.com/monzo/wearedev
