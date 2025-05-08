@@ -68,3 +68,10 @@ require'lspconfig'.gopls.setup{
     },
   },
 }
+
+-- Keymaps.
+vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Go to definition' })
+vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<CR>', { desc = 'Rename' })
+vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<CR>', { desc = 'Signature help' })
+vim.keymap.set('n', 'gref', '<cmd>lua vim.lsp.buf.references()<CR>', { desc = 'References' })
+vim.keymap.set('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', { desc = 'Hover' })
