@@ -67,7 +67,6 @@
   "terminal.integrated.copyOnSelection": true,
   "git.autofetch": true,
   "githubPullRequests.pullBranch": "never",
-  "window.commandCenter": 1,
   "go.languageServerFlags": [
     "serve",
     "-rpc.trace",
@@ -102,5 +101,6 @@
     "options": [
       "--proto_path=${env.GOPATH}/src"
     ]
-  }
+  },
+  "go.testOnSave": true
 }
