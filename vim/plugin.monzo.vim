@@ -27,6 +27,23 @@ augroup Monzo
 
 augroup END
 
+let s:wearedev_path = expand("$GOPATH/src/github.com/monzo/wearedev")
+function! s:svcname(fname) abort
+	let l:absolute_fname = fnamemodify(a:fname, ":p")
+	if stridx(l:absolute_fname, s:wearedev_path) != 0
+		throw "fname not in wearedev?"
+	endif
+
+	let l:path_relative_to_wearedev = l:absolute_fname[strlen(s:wearedev_path) + 1:]
+	let l:svcname = l:path_relative_to_wearedev[:stridx(l:path_relative_to_wearedev, "/") - 1]
+	return l:svcname
+endfunction
+
+function! s:svcpath(fname) abort
+	let l:svcname = s:svcname(a:fname)
+	return s:wearedev_path . "/" . l:svcname
+endfunction
+
 augroup MonzoDispatch
 
   " Auto-generate CODEOWNERS when .CODEOWNERS.template changes.

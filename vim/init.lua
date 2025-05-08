@@ -3,8 +3,26 @@ vim.notify("Welcome to your ridiculously bespoke neovim setup 😎", vim.log.lev
 -- Source all my original vimscript.
 vim.cmd('source ' .. vim.fn.stdpath('config') .. '/legacy-init.vim')
 
+-- Automatically open LSP-powered autocompletion.
+local setup_completion = function(client, bufnr)
+  if client:supports_method('textDocument/completion') then
+    vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
+  end
+end
+
+local custom_lsp_attach = function(setup_callbacks)
+  return function(client, bufnr)
+    for _, setup_function in ipairs(setup_callbacks) do
+      setup_function(client, bufnr)
+    end
+  end
+end
 
 require'lspconfig'.gopls.setup{
+  on_attach = custom_lsp_attach{ -- by default, set up everything!
+		setup_completion
+	},
+
   -- Run gopls with Go modules disabled.
   cmd = { "env", "GO111MODULE=off", "gopls", "-remote=auto" },
 
