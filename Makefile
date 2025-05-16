@@ -9,7 +9,6 @@ symlinks:
 	ln -sf ${DIR}/.zshrc ~/.zshrc
 	ln -sf ${DIR}/.zprofile ~/.profile
 	ln -sf ${DIR}/.zshenv ~/.zshenv
-	ln -sf ${DIR}/vim/.vimrc ~/.vimrc
 	ln -sf ${DIR}/.tmux.conf ~/.tmux.conf
 	ln -sf ${DIR}/.gitignore_global ~/.gitignore_global
 	ln -sf ${DIR}/.gitconfig ~/.gitconfig
@@ -24,9 +23,7 @@ brew:
 	brew bundle
 
 nvim:
-	ln -sf ~/.vim ~/.config/nvim
-	ln -sf ${DIR}/vim/.vimrc ~/.config/nvim/legacy-init.vim
-	ln -sf ${DIR}/vim/init.lua ~/.config/nvim/init.lua
+	ln -sf ${DIR}/lazyvim ~/.config/nvim
 	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	pip3 install neovim
 	nvim +PlugInstall +UpdateRemotePlugins +qall
