@@ -29,8 +29,10 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " Monzo
 " Plug '~/src/github.com/monzo/wearedev/tools/editors/nvim/nvim-monzo'
 Plug 'nvim-telescope/telescope.nvim' "has more optional stuff I can install
-Plug 'nvim-lua/plenary.nvim' "telescope dependency
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "telescope dependency
+Plug 'nvim-lua/plenary.nvim' "telescope+codecompanion dependency
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "telescope+codecompanion dependency
+Plug 'echasnovski/mini.nvim', { 'branch': 'stable' } " codecompanion dependency
+Plug 'olimorris/codecompanion.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'tpope/vim-dispatch'
 "cmp dependencies
