@@ -2,7 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 --
-vim.keymap.set({ "i", "v", "n" }, "<C-e>", "<Esc>", { desc = "Exit current mode" })
+vim.keymap.set({ "i", "v", "n" }, "<C-e>", "<Esc>", { noremap = true, desc = "Exit current mode" })
 vim.keymap.set("n", "<leader><leader>", ":e #<CR>", { desc = "Swap between last two buffers" })
 vim.keymap.set("v", "<leader>yy", '"+y', { desc = "Copy to clipboard" })
 
