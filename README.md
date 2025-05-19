@@ -9,9 +9,13 @@ $ make init
 
 # Vim
 ### Colors
-- .vimrc handles the color scheme selection for vim
-  - Make sure base16-railscast.vim is in .vim/colors
-- for iTerm use iTermVimThemes/base16-railscast-custom.itermcolors as the color scheme (with mild transparency)
+- For my old skool vim:
+  - .vimrc handles the color scheme selection for vim
+    - Make sure base16-railscast.vim is in .vim/colors
+  - for iTerm use iTermVimThemes/base16-railscast-custom.itermcolors as the color scheme (with mild transparency)
+- For LazyVim:
+  - Install a nice Nerd Font (to get icons): https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/RobotoMono/Regular/RobotoMonoNerdFont-Regular.ttf
+
 
 # tmux
 For vim-mode copy/paste to work, make sure the "Application in terminal may access clipboard" setting in iTerm2 is enabled. More info [here](https://github.com/tmux/tmux/issues/910).
