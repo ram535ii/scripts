@@ -12,5 +12,15 @@ return {
   },
 
   -- for navigating to proto definitions
-  { "delabere/protodef" },
+  {
+    "delabere/protodef",
+    config = function()
+      vim.keymap.set(
+        "n",
+        "<leader>gp",
+        require("protodef").protodef,
+        { noremap = true, silent = true, desc = "ProtoDefinition" }
+      )
+    end,
+  },
 }
