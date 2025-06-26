@@ -17,8 +17,8 @@ return {
       vim.g.go_highlight_format_strings = true
 
       vim.keymap.set("n", "<leader>ce", "<cmd>GoIfErr<CR>", { desc = "Go if error" })
-      vim.keymap.set("n", "<leader>tf", "<cmd>GoAlternate<CR>", { desc = "Go to tests for file" })
-      vim.keymap.set("n", "<leader>tc", "<cmd>GoCoverageToggle<CR>", { desc = "Test coverage toggle" })
+      vim.keymap.set("n", "<leader>ctf", "<cmd>GoAlternate<CR>", { desc = "Go to tests for file" }) -- code-test-alternate
+      vim.keymap.set("n", "<leader>ctc", "<cmd>GoCoverageToggle<CR>", { desc = "Test coverage toggle" }) -- code-test-coverage
     end,
   },
 
