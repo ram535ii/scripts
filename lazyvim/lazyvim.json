@@ -1,6 +1,7 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.ai.copilot"
+    "lazyvim.plugins.extras.ai.copilot",
+    "lazyvim.plugins.extras.dap.core"
   ],
   "install_version": 8,
   "news": {
