@@ -78,3 +78,6 @@ if [ -f '/Users/constantijnschepens/google-cloud-sdk/completion.zsh.inc' ]; then
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/constantijnschepens/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 [ -f ${GOPATH}/src/github.com/monzo/starter-pack/zshrc ] && source $HOME/src/github.com/monzo/starter-pack/zshrc
+
+# Added by Windsurf
+export PATH="/Users/constantijn/.codeium/windsurf/bin:$PATH"
