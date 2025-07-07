@@ -18,6 +18,7 @@ return {
 
       vim.keymap.set("n", "<leader>ce", "<cmd>GoIfErr<CR>", { desc = "Go if error" })
       vim.keymap.set("n", "<leader>ctf", "<cmd>GoAlternate<CR>", { desc = "Go to tests for file" }) -- code-test-alternate
+      vim.keymap.set("n", "<leader>ta", "<cmd>GoAlternate<CR>", { desc = "Go to tests for file" }) -- code-test-alternate
       vim.keymap.set("n", "<leader>ctc", "<cmd>GoCoverageToggle<CR>", { desc = "Test coverage toggle" }) -- code-test-coverage
     end,
   },
