@@ -51,3 +51,5 @@
 	repo = /Users/constantijn/src/github.com/monzo/wearedev
 [maintenance]
 	repo = /Users/constantijn/src/github.com/monzo/wearedev
+[rebase]
+	updateRefs = true
