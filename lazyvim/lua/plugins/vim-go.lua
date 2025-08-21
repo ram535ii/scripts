@@ -20,6 +20,14 @@ return {
       vim.keymap.set("n", "<leader>ctf", "<cmd>GoAlternate<CR>", { desc = "Go to tests for file" }) -- code-test-alternate
       vim.keymap.set("n", "<leader>ta", "<cmd>GoAlternate<CR>", { desc = "Go to tests for file" }) -- code-test-alternate
       vim.keymap.set("n", "<leader>ctc", "<cmd>GoCoverageToggle<CR>", { desc = "Test coverage toggle" }) -- code-test-coverage
+      vim.keymap.set("n", "<leader>cB", function()
+        local filename = vim.fn.expand("%:t")
+        if string.match(filename, "_test%.go$") then
+          vim.cmd("GoTestCompile")
+        elseif string.match(filename, "%.go$") then
+          vim.cmd("GoBuild")
+        end
+      end, { desc = "Go build or test compile" })
     end,
   },
 
