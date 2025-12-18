@@ -5,7 +5,7 @@
 return {
   {
     "lewis6991/gitsigns.nvim",
-    enabled = true,
+    enabled = false,
     opts = {
       --Disable inline blame text (avoids running `git blame` on every cursor move.
       current_line_blame = false,
