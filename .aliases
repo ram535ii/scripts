@@ -65,6 +65,7 @@ watchgotests() {
 
 # go test
 alias gotesthere='find . -iname "*.go" -print | entr -c richgo test -v ./...'
+alias unittest='git diff master --name-only  | cut -d'/' -f1 | uniq | xargs -I % go test ./%/...'
 
 alias cursor="open -a Cursor"
 
