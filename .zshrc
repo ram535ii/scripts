@@ -13,6 +13,9 @@ source ~/scripts/.aliases
 # allow terminal file transfer
 source ~/scripts/transfer.sh
 
+# auto-name tmux windows based on git repo/worktree
+source ~/scripts/tmux_window_name.sh
+
 # Monzo specific
 if [ -f $HOME/src/github.com/monzo/starter-pack/zshrc ]; then
   source $HOME/src/github.com/monzo/starter-pack/zshrc
@@ -81,3 +84,4 @@ HEROKU_AC_ZSH_SETUP_PATH=/Users/constantijnschepens/Library/Caches/heroku/autoco
 
 # Added by Windsurf
 export PATH="/Users/constantijn/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
