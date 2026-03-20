@@ -70,3 +70,5 @@ alias unittest='git diff master --name-only  | cut -d'/' -f1 | uniq | xargs -I %
 alias cursor="open -a Cursor"
 
 alias ais='gh copilot suggest -t shell'
+
+alias prs='gh pr list --state=all --author=@me'
