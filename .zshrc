@@ -70,7 +70,6 @@ source "$(brew --prefix)/etc/profile.d/z.sh"
 # Makes <C-a> <C-e> work in zsh+tmux
 bindkey -e
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/constantijnschepens/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/constantijnschepens/google-cloud-sdk/path.zsh.inc'; fi
